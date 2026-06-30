@@ -32,10 +32,10 @@ function FadeUp({ children, delay = 0, className = "" }: { children: React.React
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <span
-      className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#06D6F0] mb-4"
+      className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#A78BFA] mb-4"
       style={BODY}
     >
-      <span className="w-6 h-px bg-[#06D6F0]" />
+      <span className="w-6 h-px bg-[#A78BFA]" />
       {children}
     </span>
   );
@@ -58,7 +58,7 @@ function Navbar() {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled ? "rgba(8,26,47,0.92)" : "transparent",
+        background: scrolled ? "rgba(10,10,10,0.92)" : "transparent",
         backdropFilter: scrolled ? "blur(16px)" : "none",
         borderBottom: scrolled ? "1px solid rgba(255,255,255,0.06)" : "none",
       }}
@@ -66,10 +66,10 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group" style={HEADING}>
-          <div className="w-8 h-8 rounded-lg bg-[#155EEF] flex items-center justify-center">
+          <div className="w-8 h-8 rounded-lg bg-[#8B5CF6] flex items-center justify-center">
             <span className="text-white font-bold text-sm">H</span>
           </div>
-          <span className="text-white font-semibold text-lg tracking-tight">Haikel<span className="text-[#06D6F0]">.</span></span>
+          <span className="text-white font-semibold text-lg tracking-tight">Haikel<span className="text-[#A78BFA]">.</span></span>
         </a>
 
         {/* Desktop nav */}
@@ -78,7 +78,7 @@ function Navbar() {
             <a
               key={l}
               href={`#${l.toLowerCase()}`}
-              className="text-[#94A3B8] hover:text-white text-sm transition-colors duration-200"
+              className="text-[#737373] hover:text-white text-sm transition-colors duration-200"
               style={BODY}
             >
               {l}
@@ -88,7 +88,7 @@ function Navbar() {
 
         <a
           href="#contact"
-          className="hidden lg:inline-flex items-center gap-2 bg-[#155EEF] hover:bg-[#1a6aff] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-[#155EEF]/30 hover:-translate-y-0.5"
+          className="hidden lg:inline-flex items-center gap-2 bg-[#8B5CF6] hover:bg-[#9D71FB] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-[#8B5CF6]/30 hover:-translate-y-0.5"
           style={BODY}
         >
           Start Your Project <ArrowRight size={14} />
@@ -108,15 +108,15 @@ function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="lg:hidden bg-[#0E2342] border-t border-white/5 px-6 py-6 flex flex-col gap-4"
+          className="lg:hidden bg-[#111111] border-t border-white/5 px-6 py-6 flex flex-col gap-4"
           style={BODY}
         >
           {links.map((l) => (
-            <a key={l} href={`#${l.toLowerCase()}`} className="text-[#94A3B8] hover:text-white py-1" onClick={() => setOpen(false)}>
+            <a key={l} href={`#${l.toLowerCase()}`} className="text-[#737373] hover:text-white py-1" onClick={() => setOpen(false)}>
               {l}
             </a>
           ))}
-          <a href="#contact" className="mt-2 bg-[#155EEF] text-white text-sm font-semibold px-5 py-3 rounded-xl text-center" onClick={() => setOpen(false)}>
+          <a href="#contact" className="mt-2 bg-[#8B5CF6] text-white text-sm font-semibold px-5 py-3 rounded-xl text-center" onClick={() => setOpen(false)}>
             Start Your Project
           </a>
         </motion.div>
@@ -138,8 +138,8 @@ function Hero() {
         }}
       />
       {/* Glow */}
-      <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-[#155EEF]/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-[#06D6F0]/10 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-[#8B5CF6]/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-[#A78BFA]/10 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full py-24 lg:py-0 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left */}
@@ -160,7 +160,7 @@ function Hero() {
             style={HEADING}
           >
             Building<br />
-            <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, #155EEF 0%, #06D6F0 100%)" }}>
+            <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%)" }}>
               Digital
             </span>
             <br />Excellence
@@ -170,7 +170,7 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35 }}
-            className="text-[#94A3B8] text-lg leading-relaxed max-w-lg mb-10"
+            className="text-[#737373] text-lg leading-relaxed max-w-lg mb-10"
             style={BODY}
           >
             We engineer high-performance websites, desktop software, mobile applications and digital experiences that help businesses grow.
@@ -184,7 +184,7 @@ function Hero() {
           >
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-[#155EEF] hover:bg-[#1a6aff] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-[#155EEF]/30 hover:-translate-y-1"
+              className="inline-flex items-center gap-2 bg-[#8B5CF6] hover:bg-[#9D71FB] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-[#8B5CF6]/30 hover:-translate-y-1"
               style={BODY}
             >
               Start Your Project <ArrowRight size={16} />
@@ -220,18 +220,18 @@ function BlueprintIllustration() {
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-0 rounded-full border border-[#155EEF]/20"
+        className="absolute inset-0 rounded-full border border-[#8B5CF6]/20"
       />
       <motion.div
         animate={{ rotate: -360 }}
         transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-8 rounded-full border border-[#06D6F0]/10"
+        className="absolute inset-8 rounded-full border border-[#A78BFA]/10"
       />
 
       {/* Center card */}
-      <div className="absolute inset-16 rounded-3xl bg-[#0E2342] border border-white/8 flex flex-col items-center justify-center p-8 shadow-2xl">
-        <div className="w-16 h-16 rounded-2xl bg-[#155EEF]/20 border border-[#155EEF]/30 flex items-center justify-center mb-4">
-          <Monitor size={28} className="text-[#155EEF]" />
+      <div className="absolute inset-16 rounded-3xl bg-[#111111] border border-white/8 flex flex-col items-center justify-center p-8 shadow-2xl">
+        <div className="w-16 h-16 rounded-2xl bg-[#8B5CF6]/20 border border-[#8B5CF6]/30 flex items-center justify-center mb-4">
+          <Monitor size={28} className="text-[#8B5CF6]" />
         </div>
         <div className="space-y-2 w-full">
           {[80, 60, 90, 45].map((w, i) => (
@@ -240,7 +240,7 @@ function BlueprintIllustration() {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 0.8, delay: 0.8 + i * 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="h-1.5 rounded-full bg-gradient-to-r from-[#155EEF] to-[#06D6F0] origin-left"
+              className="h-1.5 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] origin-left"
               style={{ width: `${w}%` }}
             />
           ))}
@@ -251,7 +251,7 @@ function BlueprintIllustration() {
       {[0, 72, 144, 216, 288].map((deg, i) => (
         <motion.div
           key={i}
-          className="absolute w-3 h-3 rounded-full bg-[#155EEF]"
+          className="absolute w-3 h-3 rounded-full bg-[#8B5CF6]"
           style={{
             top: "50%",
             left: "50%",
@@ -263,7 +263,7 @@ function BlueprintIllustration() {
           transition={{ duration: 12 + i * 2, repeat: Infinity, ease: "linear" }}
         >
           <div
-            className="w-full h-full rounded-full bg-[#155EEF]"
+            className="w-full h-full rounded-full bg-[#8B5CF6]"
             style={{ transform: `translateX(${220 / 2 - 6}px)` }}
           />
         </motion.div>
@@ -275,8 +275,8 @@ function BlueprintIllustration() {
         { label: "Mobile", icon: Smartphone, corner: "bottom-4 left-4" },
         { label: "Desktop", icon: Monitor, corner: "top-4 left-8" },
       ].map(({ label, icon: Icon, corner }) => (
-        <div key={label} className={`absolute ${corner} flex items-center gap-1.5 bg-[#0E2342] border border-white/8 rounded-lg px-3 py-1.5`}>
-          <Icon size={12} className="text-[#06D6F0]" />
+        <div key={label} className={`absolute ${corner} flex items-center gap-1.5 bg-[#111111] border border-white/8 rounded-lg px-3 py-1.5`}>
+          <Icon size={12} className="text-[#A78BFA]" />
           <span className="text-white text-xs font-medium" style={BODY}>{label}</span>
         </div>
       ))}
@@ -290,7 +290,7 @@ function TrustedBy() {
   return (
     <section className="border-y border-white/6 py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-center text-[#94A3B8] text-xs font-semibold tracking-widest uppercase mb-8" style={BODY}>
+        <p className="text-center text-[#737373] text-xs font-semibold tracking-widest uppercase mb-8" style={BODY}>
           Trusted by forward-thinking teams
         </p>
         <div className="flex flex-wrap items-center justify-center gap-10 lg:gap-16">
@@ -332,9 +332,9 @@ function About() {
               <SectionLabel>Who We Are</SectionLabel>
               <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6" style={HEADING}>
                 Engineering-driven.<br />
-                <span className="text-[#06D6F0]">Client-focused.</span>
+                <span className="text-[#A78BFA]">Client-focused.</span>
               </h2>
-              <p className="text-[#94A3B8] text-lg leading-relaxed mb-8" style={BODY}>
+              <p className="text-[#737373] text-lg leading-relaxed mb-8" style={BODY}>
                 Haikel Agency is a premium software engineering firm. We work with ambitious businesses to design, build, and scale digital products that perform at the highest level.
               </p>
             </FadeUp>
@@ -345,13 +345,13 @@ function About() {
                 {timeline.map((t, i) => (
                   <div key={i} className="flex gap-6 pb-8 relative">
                     <div className="flex flex-col items-center">
-                      <div className="w-8 h-8 rounded-full bg-[#155EEF]/20 border border-[#155EEF]/40 flex items-center justify-center flex-shrink-0">
-                        <div className="w-2 h-2 rounded-full bg-[#155EEF]" />
+                      <div className="w-8 h-8 rounded-full bg-[#8B5CF6]/20 border border-[#8B5CF6]/40 flex items-center justify-center flex-shrink-0">
+                        <div className="w-2 h-2 rounded-full bg-[#8B5CF6]" />
                       </div>
                       {i < timeline.length - 1 && <div className="w-px flex-1 bg-white/6 mt-2" />}
                     </div>
                     <div className="pt-1 pb-2">
-                      <span className="text-[#155EEF] text-xs font-bold tracking-widest uppercase" style={BODY}>{t.year}</span>
+                      <span className="text-[#8B5CF6] text-xs font-bold tracking-widest uppercase" style={BODY}>{t.year}</span>
                       <p className="text-white mt-1 text-sm" style={BODY}>{t.event}</p>
                     </div>
                   </div>
@@ -366,15 +366,15 @@ function About() {
               {values.map((v, i) => (
                 <motion.div
                   key={i}
-                  whileHover={{ y: -4, borderColor: "rgba(21,94,239,0.4)" }}
+                  whileHover={{ y: -4, borderColor: "rgba(139,92,246,0.4)" }}
                   transition={{ duration: 0.2 }}
-                  className="bg-[#0E2342] border border-white/6 rounded-2xl p-6"
+                  className="bg-[#111111] border border-white/6 rounded-2xl p-6"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-[#155EEF]/15 border border-[#155EEF]/20 flex items-center justify-center mb-4">
-                    <CheckCircle size={16} className="text-[#155EEF]" />
+                  <div className="w-8 h-8 rounded-lg bg-[#8B5CF6]/15 border border-[#8B5CF6]/20 flex items-center justify-center mb-4">
+                    <CheckCircle size={16} className="text-[#8B5CF6]" />
                   </div>
                   <h3 className="text-white font-semibold mb-2 text-sm" style={HEADING}>{v.title}</h3>
-                  <p className="text-[#94A3B8] text-sm leading-relaxed" style={BODY}>{v.desc}</p>
+                  <p className="text-[#737373] text-sm leading-relaxed" style={BODY}>{v.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -388,14 +388,14 @@ function About() {
 // ─── Why Choose Us ───────────────────────────────────────────────────────────
 function WhyUs() {
   const cards = [
-    { icon: Wrench, title: "Engineering First", desc: "Architecture and code quality are non-negotiable in everything we ship.", color: "#155EEF" },
-    { icon: Zap, title: "Performance", desc: "Sub-second load times, efficient queries, and optimized builds as standard.", color: "#06D6F0" },
-    { icon: Shield, title: "Transparency", desc: "Weekly syncs, shared roadmaps, and no hidden scope changes.", color: "#155EEF" },
-    { icon: HeartHandshake, title: "Long-term Partnership", desc: "We stay invested after launch — maintenance, iterations, and growth.", color: "#06D6F0" },
+    { icon: Wrench, title: "Engineering First", desc: "Architecture and code quality are non-negotiable in everything we ship.", color: "#8B5CF6" },
+    { icon: Zap, title: "Performance", desc: "Sub-second load times, efficient queries, and optimized builds as standard.", color: "#A78BFA" },
+    { icon: Shield, title: "Transparency", desc: "Weekly syncs, shared roadmaps, and no hidden scope changes.", color: "#8B5CF6" },
+    { icon: HeartHandshake, title: "Long-term Partnership", desc: "We stay invested after launch — maintenance, iterations, and growth.", color: "#A78BFA" },
   ];
 
   return (
-    <section className="py-28 bg-[#0E2342]/40">
+    <section className="py-28 bg-[#111111]/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <FadeUp className="text-center mb-16">
           <SectionLabel>Why Haikel</SectionLabel>
@@ -410,7 +410,7 @@ function WhyUs() {
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.25 }}
-                className="bg-[#0E2342] border border-white/6 rounded-2xl p-8 h-full group hover:border-[#155EEF]/30 transition-colors duration-300"
+                className="bg-[#111111] border border-white/6 rounded-2xl p-8 h-full group hover:border-[#8B5CF6]/30 transition-colors duration-300"
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
@@ -419,7 +419,7 @@ function WhyUs() {
                   <c.icon size={22} style={{ color: c.color }} />
                 </div>
                 <h3 className="text-white font-semibold text-base mb-3" style={HEADING}>{c.title}</h3>
-                <p className="text-[#94A3B8] text-sm leading-relaxed" style={BODY}>{c.desc}</p>
+                <p className="text-[#737373] text-sm leading-relaxed" style={BODY}>{c.desc}</p>
               </motion.div>
             </FadeUp>
           ))}
@@ -450,14 +450,14 @@ function ServiceCard({ icon: Icon, title, items, color, mockup, reverse }: {
         <h3 className="text-3xl font-bold text-white mb-4" style={HEADING}>{title}</h3>
         <div className="flex flex-wrap gap-2 mt-6">
           {items.map((item) => (
-            <span key={item} className="text-xs font-medium px-3 py-1.5 rounded-full border border-white/10 text-[#94A3B8]" style={BODY}>
+            <span key={item} className="text-xs font-medium px-3 py-1.5 rounded-full border border-white/10 text-[#737373]" style={BODY}>
               {item}
             </span>
           ))}
         </div>
         <a
           href="#contact"
-          className="inline-flex items-center gap-2 mt-8 text-sm font-semibold text-[#155EEF] hover:text-[#06D6F0] transition-colors duration-200 group"
+          className="inline-flex items-center gap-2 mt-8 text-sm font-semibold text-[#8B5CF6] hover:text-[#A78BFA] transition-colors duration-200 group"
           style={BODY}
         >
           Discuss a project <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-200" />
@@ -473,24 +473,24 @@ function ServiceCard({ icon: Icon, title, items, color, mockup, reverse }: {
 
 function BrowserMockup({ children }: { children?: React.ReactNode }) {
   return (
-    <div className="rounded-2xl overflow-hidden border border-white/8 shadow-2xl bg-[#06101e]">
-      <div className="flex items-center gap-1.5 px-4 py-3 bg-[#0E2342] border-b border-white/6">
+    <div className="rounded-2xl overflow-hidden border border-white/8 shadow-2xl bg-[#0D0D0D]">
+      <div className="flex items-center gap-1.5 px-4 py-3 bg-[#111111] border-b border-white/6">
         {["#FF5F57", "#FEBC2E", "#28C840"].map((c) => (
           <div key={c} className="w-3 h-3 rounded-full" style={{ background: c }} />
         ))}
-        <div className="ml-4 flex-1 bg-[#081A2F] rounded-md h-5 text-[10px] text-[#94A3B8] flex items-center px-3" style={BODY}>
+        <div className="ml-4 flex-1 bg-[#0A0A0A] rounded-md h-5 text-[10px] text-[#737373] flex items-center px-3" style={BODY}>
           haikel.agency/project
         </div>
       </div>
       <div className="p-6 space-y-3 min-h-[200px]">
         {children || (
           <>
-            <div className="h-3 bg-[#155EEF]/20 rounded-full w-3/4" />
+            <div className="h-3 bg-[#8B5CF6]/20 rounded-full w-3/4" />
             <div className="h-3 bg-white/5 rounded-full w-full" />
             <div className="h-3 bg-white/5 rounded-full w-5/6" />
             <div className="grid grid-cols-3 gap-3 mt-4">
               {[1, 2, 3].map((i) => (
-                <div key={i} className="h-20 bg-[#0E2342] rounded-xl border border-white/5" />
+                <div key={i} className="h-20 bg-[#111111] rounded-xl border border-white/5" />
               ))}
             </div>
           </>
@@ -502,40 +502,40 @@ function BrowserMockup({ children }: { children?: React.ReactNode }) {
 
 function WindowMockup() {
   return (
-    <div className="rounded-2xl overflow-hidden border border-white/8 shadow-2xl bg-[#06101e]">
-      <div className="flex items-center justify-between px-4 py-3 bg-[#0E2342] border-b border-white/6">
+    <div className="rounded-2xl overflow-hidden border border-white/8 shadow-2xl bg-[#0D0D0D]">
+      <div className="flex items-center justify-between px-4 py-3 bg-[#111111] border-b border-white/6">
         <div className="flex items-center gap-2">
-          <div className="w-4 h-4 rounded bg-[#155EEF]/30" />
-          <span className="text-[10px] text-[#94A3B8]" style={BODY}>Haikel ERP System</span>
+          <div className="w-4 h-4 rounded bg-[#8B5CF6]/30" />
+          <span className="text-[10px] text-[#737373]" style={BODY}>Haikel ERP System</span>
         </div>
         <div className="flex gap-1">
           {["—", "□", "×"].map((s) => (
-            <div key={s} className="w-5 h-5 rounded flex items-center justify-center text-[10px] text-[#94A3B8] hover:bg-white/10 cursor-pointer">{s}</div>
+            <div key={s} className="w-5 h-5 rounded flex items-center justify-center text-[10px] text-[#737373] hover:bg-white/10 cursor-pointer">{s}</div>
           ))}
         </div>
       </div>
       <div className="flex">
-        <div className="w-14 bg-[#081A2F] border-r border-white/5 py-4 flex flex-col items-center gap-4">
+        <div className="w-14 bg-[#0A0A0A] border-r border-white/5 py-4 flex flex-col items-center gap-4">
           {[BarChart3, Layers, Globe, Shield].map((Icon, i) => (
-            <div key={i} className={`w-8 h-8 rounded-lg flex items-center justify-center ${i === 0 ? "bg-[#155EEF]/20" : ""}`}>
-              <Icon size={14} className={i === 0 ? "text-[#155EEF]" : "text-[#94A3B8]"} />
+            <div key={i} className={`w-8 h-8 rounded-lg flex items-center justify-center ${i === 0 ? "bg-[#8B5CF6]/20" : ""}`}>
+              <Icon size={14} className={i === 0 ? "text-[#8B5CF6]" : "text-[#737373]"} />
             </div>
           ))}
         </div>
         <div className="flex-1 p-4 space-y-3">
-          <div className="h-2 bg-[#155EEF]/20 rounded-full w-1/3" />
+          <div className="h-2 bg-[#8B5CF6]/20 rounded-full w-1/3" />
           <div className="grid grid-cols-2 gap-2">
             {[1, 2].map((i) => (
-              <div key={i} className="h-16 bg-[#0E2342] rounded-xl border border-white/5 p-3">
-                <div className="h-1.5 bg-[#155EEF]/30 rounded-full w-2/3 mb-1.5" />
-                <div className="h-5 bg-[#155EEF]/10 rounded w-1/2" />
+              <div key={i} className="h-16 bg-[#111111] rounded-xl border border-white/5 p-3">
+                <div className="h-1.5 bg-[#8B5CF6]/30 rounded-full w-2/3 mb-1.5" />
+                <div className="h-5 bg-[#8B5CF6]/10 rounded w-1/2" />
               </div>
             ))}
           </div>
-          <div className="h-24 bg-[#0E2342] rounded-xl border border-white/5 p-3">
+          <div className="h-24 bg-[#111111] rounded-xl border border-white/5 p-3">
             <div className="flex gap-1 h-full items-end">
               {[60, 40, 80, 55, 70, 45, 90].map((h, i) => (
-                <div key={i} className="flex-1 rounded-sm" style={{ height: `${h}%`, background: `rgba(21,94,239,${0.2 + i * 0.05})` }} />
+                <div key={i} className="flex-1 rounded-sm" style={{ height: `${h}%`, background: `rgba(139,92,246,${0.2 + i * 0.05})` }} />
               ))}
             </div>
           </div>
@@ -548,13 +548,13 @@ function WindowMockup() {
 function PhoneMockup() {
   return (
     <div className="flex justify-center">
-      <div className="w-48 rounded-[2rem] overflow-hidden border-2 border-white/10 shadow-2xl bg-[#06101e]">
-        <div className="h-6 bg-[#0E2342] flex items-center justify-center">
+      <div className="w-48 rounded-[2rem] overflow-hidden border-2 border-white/10 shadow-2xl bg-[#0D0D0D]">
+        <div className="h-6 bg-[#111111] flex items-center justify-center">
           <div className="w-12 h-1 bg-white/20 rounded-full" />
         </div>
-        <div className="bg-[#081A2F] p-3 space-y-3 min-h-[280px]">
-          <div className="h-24 bg-gradient-to-br from-[#155EEF]/30 to-[#06D6F0]/10 rounded-2xl border border-white/5 flex items-center justify-center">
-            <Smartphone size={28} className="text-[#155EEF]/60" />
+        <div className="bg-[#0A0A0A] p-3 space-y-3 min-h-[280px]">
+          <div className="h-24 bg-gradient-to-br from-[#8B5CF6]/30 to-[#A78BFA]/10 rounded-2xl border border-white/5 flex items-center justify-center">
+            <Smartphone size={28} className="text-[#8B5CF6]/60" />
           </div>
           <div className="space-y-1.5">
             <div className="h-2 bg-white/10 rounded-full w-full" />
@@ -562,16 +562,16 @@ function PhoneMockup() {
           </div>
           <div className="grid grid-cols-2 gap-2">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="h-12 bg-[#0E2342] rounded-xl border border-white/5" />
+              <div key={i} className="h-12 bg-[#111111] rounded-xl border border-white/5" />
             ))}
           </div>
-          <div className="h-8 bg-[#155EEF] rounded-xl flex items-center justify-center">
+          <div className="h-8 bg-[#8B5CF6] rounded-xl flex items-center justify-center">
             <div className="h-1.5 bg-white/40 rounded-full w-16" />
           </div>
         </div>
-        <div className="h-8 bg-[#0E2342] flex items-center justify-around px-4">
+        <div className="h-8 bg-[#111111] flex items-center justify-around px-4">
           {[Globe, Smartphone, Monitor].map((Icon, i) => (
-            <Icon key={i} size={14} className={i === 1 ? "text-[#155EEF]" : "text-[#94A3B8]"} />
+            <Icon key={i} size={14} className={i === 1 ? "text-[#8B5CF6]" : "text-[#737373]"} />
           ))}
         </div>
       </div>
@@ -581,25 +581,25 @@ function PhoneMockup() {
 
 function VideoEditorMockup() {
   return (
-    <div className="rounded-2xl overflow-hidden border border-white/8 shadow-2xl bg-[#06101e]">
-      <div className="flex items-center gap-2 px-4 py-3 bg-[#0E2342] border-b border-white/6">
-        <div className="w-3 h-3 rounded-full bg-[#155EEF]" />
-        <span className="text-[10px] text-[#94A3B8]" style={BODY}>Haikel Media Studio</span>
+    <div className="rounded-2xl overflow-hidden border border-white/8 shadow-2xl bg-[#0D0D0D]">
+      <div className="flex items-center gap-2 px-4 py-3 bg-[#111111] border-b border-white/6">
+        <div className="w-3 h-3 rounded-full bg-[#8B5CF6]" />
+        <span className="text-[10px] text-[#737373]" style={BODY}>Haikel Media Studio</span>
       </div>
       <div className="p-4 space-y-3">
         {/* Preview */}
-        <div className="aspect-video bg-[#0E2342] rounded-xl border border-white/5 flex items-center justify-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#155EEF]/10 to-[#06D6F0]/5" />
+        <div className="aspect-video bg-[#111111] rounded-xl border border-white/5 flex items-center justify-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#8B5CF6]/10 to-[#A78BFA]/5" />
           <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
             <div className="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[10px] border-l-white/60 ml-1" />
           </div>
         </div>
         {/* Timeline */}
         <div className="space-y-1.5">
-          {[["#155EEF", 70], ["#06D6F0", 55], ["#94A3B8", 80]].map(([c, w], i) => (
+          {[["#8B5CF6", 70], ["#A78BFA", 55], ["#737373", 80]].map(([c, w], i) => (
             <div key={i} className="flex items-center gap-2">
-              <div className="text-[8px] text-[#94A3B8] w-8" style={BODY}>{["VID", "AUD", "FX"][i]}</div>
-              <div className="flex-1 h-4 bg-[#0E2342] rounded relative overflow-hidden">
+              <div className="text-[8px] text-[#737373] w-8" style={BODY}>{["VID", "AUD", "FX"][i]}</div>
+              <div className="flex-1 h-4 bg-[#111111] rounded relative overflow-hidden">
                 <div className="absolute left-0 top-0 h-full rounded opacity-70" style={{ width: `${w}%`, background: c as string }} />
               </div>
             </div>
@@ -616,7 +616,7 @@ function Services() {
       icon: Globe,
       title: "Web Development",
       items: ["Landing Pages", "Business Websites", "E-commerce", "Custom Platforms", "SEO Ready", "Responsive Design"],
-      color: "#155EEF",
+      color: "#8B5CF6",
       mockup: <BrowserMockup />,
       reverse: false,
     },
@@ -624,7 +624,7 @@ function Services() {
       icon: Monitor,
       title: "Desktop Software",
       items: ["POS Systems", "Inventory Management", "ERP Solutions", "Internal Tools", "Database Systems"],
-      color: "#06D6F0",
+      color: "#A78BFA",
       mockup: <WindowMockup />,
       reverse: true,
     },
@@ -632,7 +632,7 @@ function Services() {
       icon: Smartphone,
       title: "Mobile App Development",
       items: ["Android", "iOS", "Flutter", "API Integration", "Secure Authentication"],
-      color: "#155EEF",
+      color: "#8B5CF6",
       mockup: <PhoneMockup />,
       reverse: false,
     },
@@ -640,7 +640,7 @@ function Services() {
       icon: Video,
       title: "Video Editing",
       items: ["Commercial Videos", "Social Media Reels", "Motion Graphics", "Promotional Videos", "Brand Content"],
-      color: "#06D6F0",
+      color: "#A78BFA",
       mockup: <VideoEditorMockup />,
       reverse: true,
     },
@@ -682,7 +682,7 @@ function Results() {
   const indicators = ["Performance Optimized", "Responsive", "Secure", "Scalable", "Modern UI/UX", "Best Practices"];
 
   return (
-    <section className="py-28 bg-[#0E2342]/40">
+    <section className="py-28 bg-[#111111]/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <FadeUp className="text-center mb-16">
           <SectionLabel>Outcomes</SectionLabel>
@@ -697,11 +697,11 @@ function Results() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.2 }}
-                className="bg-[#081A2F] border border-white/6 rounded-2xl p-6 group hover:border-[#155EEF]/30 transition-colors duration-300"
+                className="bg-[#0A0A0A] border border-white/6 rounded-2xl p-6 group hover:border-[#8B5CF6]/30 transition-colors duration-300"
               >
-                <c.icon size={20} className="text-[#155EEF] mb-4" />
+                <c.icon size={20} className="text-[#8B5CF6] mb-4" />
                 <h3 className="text-white font-semibold text-sm mb-1.5" style={HEADING}>{c.title}</h3>
-                <p className="text-[#94A3B8] text-xs leading-relaxed" style={BODY}>{c.desc}</p>
+                <p className="text-[#737373] text-xs leading-relaxed" style={BODY}>{c.desc}</p>
               </motion.div>
             </FadeUp>
           ))}
@@ -712,10 +712,10 @@ function Results() {
             {indicators.map((ind) => (
               <span
                 key={ind}
-                className="flex items-center gap-2 text-sm text-[#94A3B8] border border-white/8 px-4 py-2 rounded-full"
+                className="flex items-center gap-2 text-sm text-[#737373] border border-white/8 px-4 py-2 rounded-full"
                 style={BODY}
               >
-                <CheckCircle size={14} className="text-[#06D6F0]" />
+                <CheckCircle size={14} className="text-[#A78BFA]" />
                 {ind}
               </span>
             ))}
@@ -755,7 +755,7 @@ function Process() {
             {/* Progress line */}
             <div className="absolute top-8 left-0 right-0 h-px bg-white/6" />
             <motion.div
-              className="absolute top-8 left-0 h-px bg-gradient-to-r from-[#155EEF] to-[#06D6F0]"
+              className="absolute top-8 left-0 h-px bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA]"
               animate={{ width: `${((active + 1) / steps.length) * 100}%` }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             />
@@ -775,19 +775,19 @@ function Process() {
                     <div
                       className="absolute inset-0 rounded-2xl transition-all duration-300"
                       style={{
-                        background: i <= active ? "linear-gradient(135deg,#155EEF,#06D6F0)" : "#0E2342",
+                        background: i <= active ? "linear-gradient(135deg,#8B5CF6,#A78BFA)" : "#111111",
                         border: i <= active ? "none" : "1px solid rgba(255,255,255,0.08)",
                       }}
                     />
-                    <span className={`relative text-sm font-bold ${i <= active ? "text-white" : "text-[#94A3B8]"}`}>{s.num}</span>
+                    <span className={`relative text-sm font-bold ${i <= active ? "text-white" : "text-[#737373]"}`}>{s.num}</span>
                   </div>
                   <div>
-                    <p className={`text-xs font-bold text-center mb-1 ${i <= active ? "text-white" : "text-[#94A3B8]"}`} style={HEADING}>{s.title}</p>
+                    <p className={`text-xs font-bold text-center mb-1 ${i <= active ? "text-white" : "text-[#737373]"}`} style={HEADING}>{s.title}</p>
                     {i === active && (
                       <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="text-[10px] text-[#94A3B8] text-center leading-relaxed"
+                        className="text-[10px] text-[#737373] text-center leading-relaxed"
                         style={BODY}
                       >
                         {s.desc}
@@ -804,13 +804,13 @@ function Process() {
         <div className="lg:hidden space-y-4">
           {steps.map((s, i) => (
             <FadeUp key={i} delay={i * 0.05}>
-              <div className="flex gap-4 bg-[#0E2342] border border-white/6 rounded-2xl p-5">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#155EEF] to-[#06D6F0] flex items-center justify-center flex-shrink-0">
+              <div className="flex gap-4 bg-[#111111] border border-white/6 rounded-2xl p-5">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#A78BFA] flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-xs font-bold" style={HEADING}>{s.num}</span>
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-sm mb-1" style={HEADING}>{s.title}</h3>
-                  <p className="text-[#94A3B8] text-xs leading-relaxed" style={BODY}>{s.desc}</p>
+                  <p className="text-[#737373] text-xs leading-relaxed" style={BODY}>{s.desc}</p>
                 </div>
               </div>
             </FadeUp>
@@ -829,26 +829,26 @@ function Portfolio() {
       industry: "E-commerce",
       tech: ["Next.js", "Node.js", "PostgreSQL"],
       desc: "A high-throughput e-commerce platform handling 10,000+ SKUs with real-time inventory and custom checkout flows.",
-      color: "#155EEF",
+      color: "#8B5CF6",
     },
     {
       name: "FleetCore ERP",
       industry: "Logistics",
       tech: ["Electron", "React", "SQLite"],
       desc: "An offline-capable desktop ERP system for fleet management with driver scheduling and route optimization.",
-      color: "#06D6F0",
+      color: "#A78BFA",
     },
     {
       name: "Pulse Health App",
       industry: "Healthcare",
       tech: ["Flutter", "Firebase", "Python"],
       desc: "A HIPAA-conscious mobile app for patient monitoring with real-time vitals dashboard and secure messaging.",
-      color: "#155EEF",
+      color: "#8B5CF6",
     },
   ];
 
   return (
-    <section id="portfolio" className="py-28 bg-[#0E2342]/40">
+    <section id="portfolio" className="py-28 bg-[#111111]/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <FadeUp className="text-center mb-16">
           <SectionLabel>Our Work</SectionLabel>
@@ -863,10 +863,10 @@ function Portfolio() {
               <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                className="bg-[#081A2F] border border-white/6 rounded-3xl overflow-hidden group hover:border-[#155EEF]/30 transition-colors duration-300"
+                className="bg-[#0A0A0A] border border-white/6 rounded-3xl overflow-hidden group hover:border-[#8B5CF6]/30 transition-colors duration-300"
               >
                 {/* Mockup preview */}
-                <div className="aspect-[4/3] bg-[#0E2342] relative overflow-hidden p-4">
+                <div className="aspect-[4/3] bg-[#111111] relative overflow-hidden p-4">
                   <div className="absolute inset-0 bg-gradient-to-br opacity-20" style={{ backgroundImage: `radial-gradient(circle at 30% 40%, ${p.color}, transparent 60%)` }} />
                   <BrowserMockup />
                 </div>
@@ -875,18 +875,18 @@ function Portfolio() {
                   <div className="flex items-start justify-between mb-3">
                     <div>
                       <h3 className="text-white font-bold text-lg" style={HEADING}>{p.name}</h3>
-                      <span className="text-xs text-[#94A3B8]" style={BODY}>{p.industry}</span>
+                      <span className="text-xs text-[#737373]" style={BODY}>{p.industry}</span>
                     </div>
                   </div>
-                  <p className="text-[#94A3B8] text-sm leading-relaxed mb-4" style={BODY}>{p.desc}</p>
+                  <p className="text-[#737373] text-sm leading-relaxed mb-4" style={BODY}>{p.desc}</p>
                   <div className="flex flex-wrap gap-1.5 mb-5">
                     {p.tech.map((t) => (
-                      <span key={t} className="text-[11px] px-2.5 py-1 bg-[#155EEF]/10 text-[#155EEF] rounded-full border border-[#155EEF]/20" style={BODY}>
+                      <span key={t} className="text-[11px] px-2.5 py-1 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-full border border-[#8B5CF6]/20" style={BODY}>
                         {t}
                       </span>
                     ))}
                   </div>
-                  <button className="inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:text-[#06D6F0] transition-colors duration-200" style={BODY}>
+                  <button className="inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:text-[#A78BFA] transition-colors duration-200" style={BODY}>
                     View Case Study <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
                 </div>
@@ -922,14 +922,14 @@ function Technologies() {
             {techs.map((t) => (
               <motion.div
                 key={t}
-                whileHover={{ y: -3, borderColor: "rgba(21,94,239,0.5)" }}
+                whileHover={{ y: -3, borderColor: "rgba(139,92,246,0.5)" }}
                 transition={{ duration: 0.2 }}
-                className="flex items-center gap-2.5 border border-white/8 bg-[#0E2342] rounded-xl px-5 py-3 cursor-default group"
+                className="flex items-center gap-2.5 border border-white/8 bg-[#111111] rounded-xl px-5 py-3 cursor-default group"
               >
-                <div className="w-6 h-6 rounded-md bg-white/5 group-hover:bg-[#155EEF]/20 transition-colors duration-200 flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-sm bg-white/20 group-hover:bg-[#155EEF]/60 transition-colors duration-200" />
+                <div className="w-6 h-6 rounded-md bg-white/5 group-hover:bg-[#8B5CF6]/20 transition-colors duration-200 flex items-center justify-center">
+                  <div className="w-3 h-3 rounded-sm bg-white/20 group-hover:bg-[#8B5CF6]/60 transition-colors duration-200" />
                 </div>
-                <span className="text-[#94A3B8] group-hover:text-white text-sm font-medium transition-colors duration-200" style={BODY}>
+                <span className="text-[#737373] group-hover:text-white text-sm font-medium transition-colors duration-200" style={BODY}>
                   {t}
                 </span>
               </motion.div>
@@ -950,7 +950,7 @@ function Testimonials() {
   ];
 
   return (
-    <section className="py-28 bg-[#0E2342]/40">
+    <section className="py-28 bg-[#111111]/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <FadeUp className="text-center mb-16">
           <SectionLabel>Client Voices</SectionLabel>
@@ -965,22 +965,22 @@ function Testimonials() {
               <motion.div
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.25 }}
-                className="bg-[#081A2F] border border-white/6 rounded-3xl p-8 relative group hover:border-[#155EEF]/30 transition-colors duration-300"
+                className="bg-[#0A0A0A] border border-white/6 rounded-3xl p-8 relative group hover:border-[#8B5CF6]/30 transition-colors duration-300"
               >
-                <div className="text-[#155EEF]/30 text-6xl font-serif leading-none mb-4 select-none">"</div>
+                <div className="text-[#8B5CF6]/30 text-6xl font-serif leading-none mb-4 select-none">"</div>
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} size={14} className="text-[#06D6F0] fill-[#06D6F0]" />
+                    <Star key={j} size={14} className="text-[#A78BFA] fill-[#A78BFA]" />
                   ))}
                 </div>
-                <p className="text-[#94A3B8] text-sm leading-relaxed mb-6 italic" style={BODY}>"{item.quote}"</p>
+                <p className="text-[#737373] text-sm leading-relaxed mb-6 italic" style={BODY}>"{item.quote}"</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#155EEF] to-[#06D6F0] flex items-center justify-center text-white font-bold text-sm" style={HEADING}>
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#A78BFA] flex items-center justify-center text-white font-bold text-sm" style={HEADING}>
                     {item.name[0]}
                   </div>
                   <div>
                     <p className="text-white text-sm font-semibold" style={HEADING}>{item.name}</p>
-                    <p className="text-[#94A3B8] text-xs" style={BODY}>{item.role}</p>
+                    <p className="text-[#737373] text-xs" style={BODY}>{item.role}</p>
                   </div>
                 </div>
               </motion.div>
@@ -1021,7 +1021,7 @@ function FAQ() {
                   className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/2 transition-colors duration-200"
                 >
                   <span className="text-white font-medium text-sm pr-4" style={HEADING}>{item.q}</span>
-                  {open === i ? <ChevronUp size={16} className="text-[#06D6F0] flex-shrink-0" /> : <ChevronDown size={16} className="text-[#94A3B8] flex-shrink-0" />}
+                  {open === i ? <ChevronUp size={16} className="text-[#A78BFA] flex-shrink-0" /> : <ChevronDown size={16} className="text-[#737373] flex-shrink-0" />}
                 </button>
                 {open === i && (
                   <motion.div
@@ -1031,7 +1031,7 @@ function FAQ() {
                     transition={{ duration: 0.3 }}
                     className="px-6 pb-5"
                   >
-                    <p className="text-[#94A3B8] text-sm leading-relaxed" style={BODY}>{item.a}</p>
+                    <p className="text-[#737373] text-sm leading-relaxed" style={BODY}>{item.a}</p>
                   </motion.div>
                 )}
               </div>
@@ -1055,7 +1055,7 @@ function Contact() {
     e.preventDefault();
   };
 
-  const inputClass = "w-full bg-[#0E2342] border border-white/8 rounded-xl px-4 py-3 text-white text-sm placeholder:text-[#94A3B8]/60 focus:outline-none focus:border-[#155EEF]/60 transition-colors duration-200";
+  const inputClass = "w-full bg-[#111111] border border-white/8 rounded-xl px-4 py-3 text-white text-sm placeholder:text-[#737373]/60 focus:outline-none focus:border-[#8B5CF6]/60 transition-colors duration-200";
 
   const contacts = [
     { icon: Mail, label: "Email", value: "hello@haikel.agency" },
@@ -1069,14 +1069,14 @@ function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-28 bg-[#0E2342]/40">
+    <section id="contact" className="py-28 bg-[#111111]/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <FadeUp className="text-center mb-16">
           <SectionLabel>Get in Touch</SectionLabel>
           <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight" style={HEADING}>
             {"Let's Build Something"}
             <br />
-            <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg,#155EEF,#06D6F0)" }}>
+            <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg,#8B5CF6,#A78BFA)" }}>
               Great Together
             </span>
           </h2>
@@ -1085,50 +1085,50 @@ function Contact() {
         <div className="grid lg:grid-cols-5 gap-10">
           {/* Form */}
           <FadeUp className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="bg-[#081A2F] border border-white/6 rounded-3xl p-8 space-y-5">
+            <form onSubmit={handleSubmit} className="bg-[#0A0A0A] border border-white/6 rounded-3xl p-8 space-y-5">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-semibold text-[#94A3B8] mb-2 uppercase tracking-widest" style={BODY}>Full Name</label>
+                  <label className="block text-xs font-semibold text-[#737373] mb-2 uppercase tracking-widest" style={BODY}>Full Name</label>
                   <input name="name" value={form.name} onChange={handleChange} placeholder="John Smith" className={inputClass} style={BODY} />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#94A3B8] mb-2 uppercase tracking-widest" style={BODY}>Company</label>
+                  <label className="block text-xs font-semibold text-[#737373] mb-2 uppercase tracking-widest" style={BODY}>Company</label>
                   <input name="company" value={form.company} onChange={handleChange} placeholder="Acme Corp" className={inputClass} style={BODY} />
                 </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-semibold text-[#94A3B8] mb-2 uppercase tracking-widest" style={BODY}>Email</label>
+                  <label className="block text-xs font-semibold text-[#737373] mb-2 uppercase tracking-widest" style={BODY}>Email</label>
                   <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="john@company.com" className={inputClass} style={BODY} />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#94A3B8] mb-2 uppercase tracking-widest" style={BODY}>Phone</label>
+                  <label className="block text-xs font-semibold text-[#737373] mb-2 uppercase tracking-widest" style={BODY}>Phone</label>
                   <input name="phone" value={form.phone} onChange={handleChange} placeholder="+1 555 000 0000" className={inputClass} style={BODY} />
                 </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-semibold text-[#94A3B8] mb-2 uppercase tracking-widest" style={BODY}>Service</label>
+                  <label className="block text-xs font-semibold text-[#737373] mb-2 uppercase tracking-widest" style={BODY}>Service</label>
                   <select name="service" value={form.service} onChange={handleChange} className={inputClass} style={BODY}>
-                    <option value="" className="bg-[#0E2342]">Select a service</option>
-                    <option value="web" className="bg-[#0E2342]">Web Development</option>
-                    <option value="desktop" className="bg-[#0E2342]">Desktop Software</option>
-                    <option value="mobile" className="bg-[#0E2342]">Mobile App</option>
-                    <option value="video" className="bg-[#0E2342]">Video Editing</option>
+                    <option value="" className="bg-[#111111]">Select a service</option>
+                    <option value="web" className="bg-[#111111]">Web Development</option>
+                    <option value="desktop" className="bg-[#111111]">Desktop Software</option>
+                    <option value="mobile" className="bg-[#111111]">Mobile App</option>
+                    <option value="video" className="bg-[#111111]">Video Editing</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#94A3B8] mb-2 uppercase tracking-widest" style={BODY}>Budget</label>
+                  <label className="block text-xs font-semibold text-[#737373] mb-2 uppercase tracking-widest" style={BODY}>Budget</label>
                   <select name="budget" value={form.budget} onChange={handleChange} className={inputClass} style={BODY}>
-                    <option value="" className="bg-[#0E2342]">Select a range</option>
-                    <option value="5k" className="bg-[#0E2342]">$5k – $15k</option>
-                    <option value="15k" className="bg-[#0E2342]">$15k – $50k</option>
-                    <option value="50k" className="bg-[#0E2342]">$50k+</option>
+                    <option value="" className="bg-[#111111]">Select a range</option>
+                    <option value="5k" className="bg-[#111111]">$5k – $15k</option>
+                    <option value="15k" className="bg-[#111111]">$15k – $50k</option>
+                    <option value="50k" className="bg-[#111111]">$50k+</option>
                   </select>
                 </div>
               </div>
               <div>
-                <label className="block text-xs font-semibold text-[#94A3B8] mb-2 uppercase tracking-widest" style={BODY}>Project Details</label>
+                <label className="block text-xs font-semibold text-[#737373] mb-2 uppercase tracking-widest" style={BODY}>Project Details</label>
                 <textarea
                   name="details"
                   value={form.details}
@@ -1141,7 +1141,7 @@ function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-[#155EEF] hover:bg-[#1a6aff] text-white font-semibold py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-[#155EEF]/30 hover:-translate-y-0.5"
+                className="w-full flex items-center justify-center gap-2 bg-[#8B5CF6] hover:bg-[#9D71FB] text-white font-semibold py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-[#8B5CF6]/30 hover:-translate-y-0.5"
                 style={BODY}
               >
                 Send Message <Send size={16} />
@@ -1153,19 +1153,19 @@ function Contact() {
           <FadeUp delay={0.1} className="lg:col-span-2">
             <div className="space-y-4">
               {contacts.map((c, i) => (
-                <div key={i} className="flex items-center gap-4 bg-[#081A2F] border border-white/6 rounded-2xl px-5 py-4">
-                  <div className="w-9 h-9 rounded-xl bg-[#155EEF]/15 border border-[#155EEF]/20 flex items-center justify-center flex-shrink-0">
-                    <c.icon size={16} className="text-[#155EEF]" />
+                <div key={i} className="flex items-center gap-4 bg-[#0A0A0A] border border-white/6 rounded-2xl px-5 py-4">
+                  <div className="w-9 h-9 rounded-xl bg-[#8B5CF6]/15 border border-[#8B5CF6]/20 flex items-center justify-center flex-shrink-0">
+                    <c.icon size={16} className="text-[#8B5CF6]" />
                   </div>
                   <div>
-                    <p className="text-[#94A3B8] text-[10px] uppercase font-semibold tracking-widest" style={BODY}>{c.label}</p>
+                    <p className="text-[#737373] text-[10px] uppercase font-semibold tracking-widest" style={BODY}>{c.label}</p>
                     <p className="text-white text-sm" style={BODY}>{c.value}</p>
                   </div>
                 </div>
               ))}
 
               {/* Map placeholder */}
-              <div className="bg-[#081A2F] border border-white/6 rounded-2xl overflow-hidden h-48 relative flex items-center justify-center mt-2">
+              <div className="bg-[#0A0A0A] border border-white/6 rounded-2xl overflow-hidden h-48 relative flex items-center justify-center mt-2">
                 <div
                   className="absolute inset-0 opacity-20"
                   style={{
@@ -1174,8 +1174,8 @@ function Contact() {
                   }}
                 />
                 <div className="relative flex flex-col items-center gap-2">
-                  <MapPin size={28} className="text-[#155EEF]" />
-                  <span className="text-[#94A3B8] text-xs" style={BODY}>Remote-first · Available Worldwide</span>
+                  <MapPin size={28} className="text-[#8B5CF6]" />
+                  <span className="text-[#737373] text-xs" style={BODY}>Remote-first · Available Worldwide</span>
                 </div>
               </div>
             </div>
@@ -1200,17 +1200,17 @@ function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4" style={HEADING}>
-              <div className="w-8 h-8 rounded-lg bg-[#155EEF] flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-[#8B5CF6] flex items-center justify-center">
                 <span className="text-white font-bold text-sm">H</span>
               </div>
-              <span className="text-white font-semibold text-lg tracking-tight">Haikel<span className="text-[#06D6F0]">.</span></span>
+              <span className="text-white font-semibold text-lg tracking-tight">Haikel<span className="text-[#A78BFA]">.</span></span>
             </div>
-            <p className="text-[#94A3B8] text-sm leading-relaxed max-w-xs mb-6" style={BODY}>
+            <p className="text-[#737373] text-sm leading-relaxed max-w-xs mb-6" style={BODY}>
               A premium software engineering agency delivering enterprise-grade digital products for ambitious businesses worldwide.
             </p>
             <div className="flex gap-3">
               {[Instagram, Facebook, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="w-9 h-9 rounded-xl bg-[#0E2342] border border-white/8 hover:border-[#155EEF]/40 flex items-center justify-center text-[#94A3B8] hover:text-white transition-all duration-200">
+                <a key={i} href="#" className="w-9 h-9 rounded-xl bg-[#111111] border border-white/8 hover:border-[#8B5CF6]/40 flex items-center justify-center text-[#737373] hover:text-white transition-all duration-200">
                   <Icon size={16} />
                 </a>
               ))}
@@ -1223,7 +1223,7 @@ function Footer() {
               <ul className="space-y-3">
                 {items.map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-[#94A3B8] hover:text-white text-sm transition-colors duration-200" style={BODY}>
+                    <a href="#" className="text-[#737373] hover:text-white text-sm transition-colors duration-200" style={BODY}>
                       {item}
                     </a>
                   </li>
@@ -1234,8 +1234,8 @@ function Footer() {
         </div>
 
         <div className="border-t border-white/6 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[#94A3B8] text-xs" style={BODY}>© {new Date().getFullYear()} Haikel Agency. All rights reserved.</p>
-          <p className="text-[#94A3B8] text-xs" style={BODY}>Engineered with precision.</p>
+          <p className="text-[#737373] text-xs" style={BODY}>© {new Date().getFullYear()} Haikel Agency. All rights reserved.</p>
+          <p className="text-[#737373] text-xs" style={BODY}>Engineered with precision.</p>
         </div>
       </div>
     </footer>
@@ -1245,7 +1245,7 @@ function Footer() {
 // ─── App ──────────────────────────────────────────────────────────────────────
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#081A2F] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#0A0A0A] text-white overflow-x-hidden">
       <Navbar />
       <Hero />
       <TrustedBy />
