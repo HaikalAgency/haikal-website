@@ -133,7 +133,7 @@ function Hero() {
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Grid bg */}
       <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
@@ -208,79 +208,80 @@ function Hero() {
           transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="relative hidden lg:flex items-center justify-center"
         >
-          <BlueprintIllustration />
+          <ReactBitsVisual />
         </motion.div>
       </div>
     </section>
   );
 }
 
-function BlueprintIllustration() {
+function ReactBitsVisual() {
   return (
-    <div className="relative w-full aspect-square max-w-[500px]">
-      {/* Outer ring */}
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-0 rounded-full border border-[#8B5CF6]/20"
+    <div className="relative w-full aspect-square max-w-[500px] flex items-center justify-center">
+      {/* Aurora glow effect */}
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.2, 1],
+          rotate: [0, 90, 0]
+        }}
+        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        className="absolute w-80 h-80 rounded-full bg-gradient-to-tr from-[#8B5CF6]/40 to-[#A78BFA]/10 blur-[90px]"
       />
-      <motion.div
-        animate={{ rotate: -360 }}
-        transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-8 rounded-full border border-[#A78BFA]/10"
-      />
+      
+      {/* 3D-like rotating rings (similar to ReactBits particles/rings) */}
+      <div className="relative w-64 h-64" style={{ perspective: "1000px" }}>
+        {[0, 1, 2].map((i) => (
+          <motion.div
+            key={i}
+            className="absolute inset-0 rounded-full border"
+            style={{
+               borderWidth: i === 1 ? 2 : 1,
+               borderColor: i === 1 ? "rgba(139,92,246,0.4)" : "rgba(255,255,255,0.1)",
+               borderStyle: i === 2 ? "dashed" : "solid",
+            }}
+            animate={{
+              rotateX: [0, 360],
+              rotateY: [0, 360],
+            }}
+            transition={{
+              duration: 20 + i * 5,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          />
+        ))}
 
-      {/* Center card */}
-      <div className="absolute inset-16 rounded-3xl bg-[#111111] border border-white/8 flex flex-col items-center justify-center p-8 shadow-2xl">
-        <div className="w-16 h-16 rounded-2xl bg-[#8B5CF6]/20 border border-[#8B5CF6]/30 flex items-center justify-center mb-4">
-          <Monitor size={28} className="text-[#8B5CF6]" />
-        </div>
-        <div className="space-y-2 w-full">
-          {[80, 60, 90, 45].map((w, i) => (
-            <motion.div
-              key={i}
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 + i * 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="h-1.5 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] origin-left"
-              style={{ width: `${w}%` }}
-            />
-          ))}
-        </div>
+        {/* Core glowing element */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-16 h-16 -mt-8 -ml-8 rounded-full bg-white/5 backdrop-blur-lg border border-white/20 flex items-center justify-center shadow-[0_0_50px_rgba(139,92,246,0.5)]"
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#A78BFA] animate-pulse blur-[2px]" />
+        </motion.div>
       </div>
 
-      {/* Orbiting dots */}
-      {[0, 72, 144, 216, 288].map((deg, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-3 h-3 rounded-full bg-[#8B5CF6]"
-          style={{
-            top: "50%",
-            left: "50%",
-            marginTop: -6,
-            marginLeft: -6,
-            transformOrigin: "6px 6px",
-          }}
-          animate={{ rotate: [deg, deg + 360] }}
-          transition={{ duration: 12 + i * 2, repeat: Infinity, ease: "linear" }}
-        >
-          <div
-            className="w-full h-full rounded-full bg-[#8B5CF6]"
-            style={{ transform: `translateX(${220 / 2 - 6}px)` }}
-          />
-        </motion.div>
-      ))}
-
-      {/* Corner badges */}
-      {[
-        { label: "Web", icon: Globe, corner: "top-4 right-4" },
-        { label: "Mobile", icon: Smartphone, corner: "bottom-4 left-4" },
-        { label: "Desktop", icon: Monitor, corner: "top-4 left-8" },
-      ].map(({ label, icon: Icon, corner }) => (
-        <div key={label} className={`absolute ${corner} flex items-center gap-1.5 bg-[#111111] border border-white/8 rounded-lg px-3 py-1.5`}>
-          <Icon size={12} className="text-[#A78BFA]" />
-          <span className="text-white text-xs font-medium" style={BODY}>{label}</span>
-        </div>
+      {/* Floating particles (ReactBits signature style) */}
+      {[...Array(15)].map((_, i) => (
+         <motion.div
+           key={i}
+           className="absolute w-1.5 h-1.5 bg-white/60 rounded-full"
+           initial={{
+             x: (Math.random() - 0.5) * 400,
+             y: (Math.random() - 0.5) * 400,
+             opacity: Math.random() * 0.5 + 0.2
+           }}
+           animate={{
+             x: (Math.random() - 0.5) * 400,
+             y: (Math.random() - 0.5) * 400,
+             opacity: [0.2, 0.8, 0.2]
+           }}
+           transition={{
+             duration: 6 + Math.random() * 6,
+             repeat: Infinity,
+             ease: "easeInOut"
+           }}
+         />
       ))}
     </div>
   );
