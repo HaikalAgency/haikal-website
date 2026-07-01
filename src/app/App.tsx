@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "motion/react";
+import { FaReact, FaLaravel, FaNodeJs, FaPython, FaDocker, FaFigma, FaGitAlt } from "react-icons/fa";
+import { SiNextdotjs, SiFlutter, SiElectron, SiGo } from "react-icons/si";
 import {
   Menu, X, ArrowRight, ChevronDown, ChevronUp,
   Globe, Monitor, Smartphone, Video, Zap, TrendingUp,
@@ -902,9 +904,19 @@ function Portfolio() {
 // ─── Technologies ─────────────────────────────────────────────────────────────
 function Technologies() {
   const techs = [
-    "React", "Next.js", "Laravel", "Node.js", "Flutter",
-    "Electron", "Python", "Docker", "Git", "Figma",
-    "Adobe Premiere", "After Effects",
+    { name: "React", icon: FaReact, color: "#61DAFB" },
+    { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
+    { name: "Laravel", icon: FaLaravel, color: "#FF2D20" },
+    { name: "Node.js", icon: FaNodeJs, color: "#339933" },
+    { name: "Flutter", icon: SiFlutter, color: "#54C5F8" },
+    { name: "Electron", icon: SiElectron, color: "#62C6F2" },
+    { name: "Python", icon: FaPython, color: "#3776AB" },
+    { name: "Docker", icon: FaDocker, color: "#2496ED" },
+    { name: "Git", icon: FaGitAlt, color: "#F05032" },
+    { name: "Figma", icon: FaFigma, color: "#F24E1E" },
+    { name: "Adobe Premiere", icon: Video, color: "#EA77FF" },
+    { name: "After Effects", icon: Layers, color: "#D291FF" },
+    { name: "Golang", icon: SiGo, color: "#00ADD8" },
   ];
 
   return (
@@ -921,16 +933,22 @@ function Technologies() {
           <div className="flex flex-wrap justify-center gap-3">
             {techs.map((t) => (
               <motion.div
-                key={t}
-                whileHover={{ y: -3, borderColor: "rgba(139,92,246,0.5)" }}
+                key={t.name}
+                whileHover={{ y: -3, borderColor: `${t.color}60` }}
                 transition={{ duration: 0.2 }}
                 className="flex items-center gap-2.5 border border-white/8 bg-[#111111] rounded-xl px-5 py-3 cursor-default group"
               >
-                <div className="w-6 h-6 rounded-md bg-white/5 group-hover:bg-[#8B5CF6]/20 transition-colors duration-200 flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-sm bg-white/20 group-hover:bg-[#8B5CF6]/60 transition-colors duration-200" />
+                <div 
+                  className="w-6 h-6 rounded-md flex items-center justify-center transition-all duration-200"
+                  style={{
+                    backgroundColor: `${t.color}15`,
+                    color: t.color
+                  }}
+                >
+                  <t.icon size={14} className="opacity-90 group-hover:scale-110 transition-all duration-200" />
                 </div>
                 <span className="text-[#737373] group-hover:text-white text-sm font-medium transition-colors duration-200" style={BODY}>
-                  {t}
+                  {t.name}
                 </span>
               </motion.div>
             ))}
