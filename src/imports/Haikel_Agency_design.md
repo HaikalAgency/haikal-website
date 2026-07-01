@@ -1,9 +1,11 @@
-# Haikel Agency — Website Design Specification
+# Haikal Agency — Website Design Specification
 
 ## Project Goal
-Design a premium, handcrafted website for **Haikel Agency** that feels like a Silicon Valley software company (Stripe, Linear, Vercel, Framer, Apple), not a freelance portfolio.
+
+Design a premium, handcrafted website for **Haikal Agency** that feels like a Silicon Valley software company (Stripe, Linear, Vercel, Framer, Apple), not a freelance portfolio.
 
 ### Brand Personality
+
 - Premium
 - Minimal
 - Engineering-driven
@@ -13,6 +15,7 @@ Design a premium, handcrafted website for **Haikel Agency** that feels like a Si
 - Timeless
 
 ## Color Palette
+
 - Background: #081A2F
 - Secondary: #0E2342
 - Primary: #155EEF
@@ -21,6 +24,7 @@ Design a premium, handcrafted website for **Haikel Agency** that feels like a Si
 - Gray: #94A3B8
 
 ## Typography
+
 Headings: Space Grotesk
 Body: Inter
 
@@ -29,11 +33,13 @@ Use large typography, generous whitespace, 8px spacing system, rounded corners (
 # Layout
 
 ## Navbar
+
 Logo left.
 Links: Home, Services, Portfolio, Process, Contact.
 Primary CTA: Start Your Project.
 
 ## Hero
+
 Headline:
 **Building Digital Excellence**
 
@@ -41,6 +47,7 @@ Subheadline:
 We engineer high-performance websites, desktop software, mobile applications and digital experiences that help businesses grow.
 
 Buttons:
+
 - Start Your Project
 - View Portfolio
 
@@ -48,13 +55,17 @@ Right side:
 3D architectural illustration with blueprint grid and subtle animated geometry.
 
 ## Trusted By
+
 Placeholder company logos with "Your Company Here".
 
 ## About
+
 Mission, Vision, Timeline, Core Values.
 
 ## Why Choose Us
+
 Four cards:
+
 - Engineering First
 - Performance
 - Transparency
@@ -65,7 +76,9 @@ Four cards:
 Every service has a dedicated full-width section with alternating layouts.
 
 ## Web Development
+
 Services:
+
 - Landing Pages
 - Business Websites
 - E-commerce
@@ -76,6 +89,7 @@ Services:
 Include laptop/browser mockups.
 
 ## Desktop Software
+
 - POS
 - Inventory
 - ERP
@@ -85,6 +99,7 @@ Include laptop/browser mockups.
 Show Windows application mockups.
 
 ## Mobile App Development
+
 - Android
 - iOS
 - Flutter
@@ -94,6 +109,7 @@ Show Windows application mockups.
 Display phone mockups.
 
 ## Video Editing
+
 - Commercial Videos
 - Social Media Reels
 - Motion Graphics
@@ -108,6 +124,7 @@ Headline:
 Results That Matter
 
 Cards:
+
 - High Performance
 - Business Growth
 - Secure Architecture
@@ -119,6 +136,7 @@ Cards:
 
 Below cards:
 Quality indicators:
+
 - Performance Optimized
 - Responsive
 - Secure
@@ -144,6 +162,7 @@ Horizontal animated timeline.
 Large premium project cards with laptop, tablet and phone mockups.
 
 Each card:
+
 - Project Name
 - Industry
 - Technologies
@@ -181,6 +200,7 @@ Headline:
 Let's Build Something Great Together
 
 Form:
+
 - Full Name
 - Company
 - Email
@@ -190,6 +210,7 @@ Form:
 - Project Details
 
 Side panel:
+
 - Email
 - Phone
 - WhatsApp
@@ -213,6 +234,7 @@ Copyright
 # Motion
 
 Subtle only:
+
 - Fade Up
 - Blur In
 - Scale
@@ -228,6 +250,7 @@ Duration: 200–350ms
 The website MUST NOT look AI-generated.
 
 Avoid:
+
 - Generic SaaS templates
 - Stock illustrations
 - Repeated card layouts
@@ -236,6 +259,7 @@ Avoid:
 - Generic icons
 
 Instead:
+
 - Use asymmetric layouts.
 - Every section should have a unique composition.
 - Use custom geometric icons.
