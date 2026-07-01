@@ -362,118 +362,27 @@ function ReactBitsVisual() {
 
 // ─── About ───────────────────────────────────────────────────────────────────
 function About() {
-  const values = [
-    {
-      title: "Engineering First",
-      desc: "Every decision is rooted in technical merit and long-term sustainability.",
-    },
-    {
-      title: "Radical Transparency",
-      desc: "Open timelines, open code, open communication throughout every engagement.",
-    },
-    {
-      title: "Crafted to Last",
-      desc: "We build systems that scale, not prototypes patched into production.",
-    },
-    {
-      title: "Partnership Mindset",
-      desc: "We treat your success metrics as our own, before and after launch.",
-    },
-  ];
-
-  const timeline = [
-    { year: "2019", event: "Founded with a focus on web engineering" },
-    { year: "2021", event: "Expanded into desktop & mobile software" },
-    { year: "2023", event: "Launched enterprise service offerings" },
-    { year: "2024", event: "Grew to full-stack digital agency" },
-  ];
-
   return (
     <section id="about" className="py-28">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-20 items-start">
-          {/* Left */}
-          <div>
-            <FadeUp>
-              <SectionLabel>Who We Are</SectionLabel>
-              <h2
-                className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6"
-                style={HEADING}
-              >
-                Engineering-driven.
-                <br />
-                <span className="text-[#A78BFA]">Client-focused.</span>
-              </h2>
-              <p
-                className="text-[#737373] text-lg leading-relaxed mb-8"
-                style={BODY}
-              >
-                Haikel Agency is a premium software engineering firm. We work
-                with ambitious businesses to design, build, and scale digital
-                products that perform at the highest level.
-              </p>
-            </FadeUp>
-
-            {/* Timeline */}
-            <FadeUp delay={0.1}>
-              <div className="space-y-0">
-                {timeline.map((t, i) => (
-                  <div key={i} className="flex gap-6 pb-8 relative">
-                    <div className="flex flex-col items-center">
-                      <div className="w-8 h-8 rounded-full bg-[#8B5CF6]/20 border border-[#8B5CF6]/40 flex items-center justify-center flex-shrink-0">
-                        <div className="w-2 h-2 rounded-full bg-[#8B5CF6]" />
-                      </div>
-                      {i < timeline.length - 1 && (
-                        <div className="w-px flex-1 bg-white/6 mt-2" />
-                      )}
-                    </div>
-                    <div className="pt-1 pb-2">
-                      <span
-                        className="text-[#8B5CF6] text-xs font-bold tracking-widest uppercase"
-                        style={BODY}
-                      >
-                        {t.year}
-                      </span>
-                      <p className="text-white mt-1 text-sm" style={BODY}>
-                        {t.event}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </FadeUp>
-          </div>
-
-          {/* Right — core values */}
-          <FadeUp delay={0.15}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {values.map((v, i) => (
-                <motion.div
-                  key={i}
-                  whileHover={{ y: -4, borderColor: "rgba(139,92,246,0.4)" }}
-                  transition={{ duration: 0.2 }}
-                  className="bg-[#111111] border border-white/6 rounded-2xl p-6"
-                >
-                  <div className="w-8 h-8 rounded-lg bg-[#8B5CF6]/15 border border-[#8B5CF6]/20 flex items-center justify-center mb-4">
-                    <CheckCircle size={16} className="text-[#8B5CF6]" />
-                  </div>
-                  <h3
-                    className="text-white font-semibold mb-2 text-sm"
-                    style={HEADING}
-                  >
-                    {v.title}
-                  </h3>
-                  <p
-                    className="text-[#737373] text-sm leading-relaxed"
-                    style={BODY}
-                  >
-                    {v.desc}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </FadeUp>
-        </div>
+      <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+        <FadeUp>
+          <SectionLabel>Who We Are</SectionLabel>
+          <h2
+            className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6"
+            style={HEADING}
+          >
+            Engineering-driven.{" "}
+            <span className="text-[#A78BFA]">Client-focused.</span>
+          </h2>
+          <p
+            className="text-[#737373] text-lg leading-relaxed"
+            style={BODY}
+          >
+            Haikel Agency is a premium software engineering firm. We work
+            with ambitious businesses to design, build, and scale digital
+            products that perform at the highest level.
+          </p>
+        </FadeUp>
       </div>
     </section>
   );
@@ -503,7 +412,7 @@ function WhyUs() {
     {
       icon: HeartHandshake,
       title: "Long-term Partnership",
-      desc: "We stay invested after launch — maintenance, iterations, and growth.",
+      desc: "We stay invested after launch for maintenance, iterations, and growth.",
       color: "#A78BFA",
     },
   ];
