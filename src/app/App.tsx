@@ -359,7 +359,6 @@ function ReactBitsVisual() {
   );
 }
 
-
 // ─── About ───────────────────────────────────────────────────────────────────
 function About() {
   return (
@@ -374,13 +373,10 @@ function About() {
             Engineering-driven.{" "}
             <span className="text-[#A78BFA]">Client-focused.</span>
           </h2>
-          <p
-            className="text-[#737373] text-lg leading-relaxed"
-            style={BODY}
-          >
-            Haikel Agency is a premium software engineering firm. We work
-            with ambitious businesses to design, build, and scale digital
-            products that perform at the highest level.
+          <p className="text-[#737373] text-lg leading-relaxed" style={BODY}>
+            Haikal Agency is a premium software engineering firm. We work with
+            ambitious businesses to design, build, and scale digital products
+            that perform at the highest level.
           </p>
         </FadeUp>
       </div>
@@ -421,7 +417,7 @@ function WhyUs() {
     <section className="py-28 bg-[#111111]/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <FadeUp className="text-center mb-16">
-          <SectionLabel>Why Haikel</SectionLabel>
+          <SectionLabel>Why Haikal</SectionLabel>
           <h2
             className="text-4xl lg:text-5xl font-bold text-white"
             style={HEADING}
@@ -544,7 +540,7 @@ function BrowserMockup({ children }: { children?: React.ReactNode }) {
           className="ml-4 flex-1 bg-[#0A0A0A] rounded-md h-5 text-[10px] text-[#737373] flex items-center px-3"
           style={BODY}
         >
-          haikel.agency/project
+          Haikal.agency/project
         </div>
       </div>
       <div className="p-6 space-y-3 min-h-[200px]">
@@ -575,7 +571,7 @@ function WindowMockup() {
         <div className="flex items-center gap-2">
           <div className="w-4 h-4 rounded bg-[#8B5CF6]/30" />
           <span className="text-[10px] text-[#737373]" style={BODY}>
-            Haikel ERP System
+            Haikal ERP System
           </span>
         </div>
         <div className="flex gap-1">
@@ -683,7 +679,7 @@ function VideoEditorMockup() {
       <div className="flex items-center gap-2 px-4 py-3 bg-[#111111] border-b border-white/6">
         <div className="w-3 h-3 rounded-full bg-[#8B5CF6]" />
         <span className="text-[10px] text-[#737373]" style={BODY}>
-          Haikel Media Studio
+          Haikal Media Studio
         </span>
       </div>
       <div className="p-4 space-y-3">
@@ -1106,7 +1102,7 @@ function Portfolio() {
           </h2>
         </FadeUp>
 
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-3 gap-6 cursor-pointer">
           {projects.map((p, i) => (
             <FadeUp key={i} delay={i * 0.1}>
               <motion.div
@@ -1157,7 +1153,7 @@ function Portfolio() {
                     ))}
                   </div>
                   <button
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:text-[#A78BFA] transition-colors duration-200"
+                    className="cursor-pointer inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:text-[#A78BFA] transition-colors duration-200"
                     style={BODY}
                   >
                     View Case Study{" "}
@@ -1245,7 +1241,7 @@ function Testimonials() {
   const items = [
     {
       quote:
-        "Haikel delivered our e-commerce platform two weeks ahead of schedule. The code quality and architecture choices were exactly what a scaling business needs.",
+        "Haikal delivered our e-commerce platform two weeks ahead of schedule. The code quality and architecture choices were exactly what a scaling business needs.",
       name: "Sarah K.",
       role: "CEO, Meridian Retail",
     },
@@ -1481,12 +1477,12 @@ function Contact() {
     "w-full bg-[#111111] border border-white/8 rounded-xl px-4 py-3 text-white text-sm placeholder:text-[#737373]/60 focus:outline-none focus:border-[#8B5CF6]/60 transition-colors duration-200";
 
   const contacts = [
-    { icon: Mail, label: "Email", value: "hello@haikel.agency" },
+    { icon: Mail, label: "Email", value: "hello@Haikal.agency" },
     { icon: Phone, label: "Phone", value: "+1 (555) 000-0000" },
     { icon: MessageCircle, label: "WhatsApp", value: "+1 (555) 000-0000" },
-    { icon: Instagram, label: "Instagram", value: "@haikelagency" },
-    { icon: Facebook, label: "Facebook", value: "Haikel Agency" },
-    { icon: Linkedin, label: "LinkedIn", value: "Haikel Agency" },
+    { icon: Instagram, label: "Instagram", value: "@Haikalagency" },
+    { icon: Facebook, label: "Facebook", value: "Haikal Agency" },
+    { icon: Linkedin, label: "LinkedIn", value: "Haikal Agency" },
   ];
 
   return (
@@ -1717,7 +1713,7 @@ function Footer() {
                 <span className="text-white font-bold text-sm">H</span>
               </div>
               <span className="text-white font-semibold text-lg tracking-tight">
-                Haikel<span className="text-[#A78BFA]">.</span>
+                Haikal
               </span>
             </div>
             <p
@@ -1767,7 +1763,7 @@ function Footer() {
 
         <div className="border-t border-white/6 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#737373] text-xs" style={BODY}>
-            © {new Date().getFullYear()} Haikel Agency. All rights reserved.
+            © {new Date().getFullYear()} Haikal Agency. All rights reserved.
           </p>
           <p className="text-[#737373] text-xs" style={BODY}>
             Engineered with precision.
