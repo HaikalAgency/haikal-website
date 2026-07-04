@@ -48,6 +48,7 @@ import {
   SelectValue,
 } from "./components/ui/select";
 import { Component as ImageAutoSlider } from "./components/ui/image-auto-slider";
+import { SplineScene } from "./components/ui/splite";
 
 // ─── Fonts ──────────────────────────────────────────────────────────────────
 const HEADING = { fontFamily: "'Space Grotesk', sans-serif" };
@@ -278,9 +279,12 @@ function Hero() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="relative hidden lg:flex items-center justify-center"
+          className="relative hidden lg:flex items-center justify-center w-full h-[500px]"
         >
-          <ReactBitsVisual />
+          <SplineScene 
+            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+            className="w-full h-full"
+          />
         </motion.div>
       </div>
     </section>
