@@ -1116,7 +1116,7 @@ function Portfolio() {
               className="inline-flex items-center gap-2 border border-white/10 hover:border-white/20 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:bg-white/5 group"
               style={BODY}
             >
-              See More Projects
+              See Our Projects
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </FadeUp>
