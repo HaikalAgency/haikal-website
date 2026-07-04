@@ -47,6 +47,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./components/ui/select";
+import { Component as ImageAutoSlider } from "./components/ui/image-auto-slider";
 
 // ─── Fonts ──────────────────────────────────────────────────────────────────
 const HEADING = { fontFamily: "'Space Grotesk', sans-serif" };
@@ -1102,70 +1103,23 @@ function Portfolio() {
           </h2>
         </FadeUp>
 
-        <div className="grid lg:grid-cols-3 gap-6 cursor-pointer">
-          {projects.map((p, i) => (
-            <FadeUp key={i} delay={i * 0.1}>
-              <motion.div
-                whileHover={{ y: -8 }}
-                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                className="bg-[#0A0A0A] border border-white/6 rounded-3xl overflow-hidden group hover:border-[#8B5CF6]/30 transition-colors duration-300"
-              >
-                {/* Mockup preview */}
-                <div className="aspect-[4/3] bg-[#111111] relative overflow-hidden p-4">
-                  <div
-                    className="absolute inset-0 bg-gradient-to-br opacity-20"
-                    style={{
-                      backgroundImage: `radial-gradient(circle at 30% 40%, ${p.color}, transparent 60%)`,
-                    }}
-                  />
-                  <BrowserMockup />
-                </div>
+        <div className="w-full mt-10">
+          <FadeUp delay={0.1}>
+            <ImageAutoSlider />
+          </FadeUp>
+        </div>
 
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <h3
-                        className="text-white font-bold text-lg"
-                        style={HEADING}
-                      >
-                        {p.name}
-                      </h3>
-                      <span className="text-xs text-[#737373]" style={BODY}>
-                        {p.industry}
-                      </span>
-                    </div>
-                  </div>
-                  <p
-                    className="text-[#737373] text-sm leading-relaxed mb-4"
-                    style={BODY}
-                  >
-                    {p.desc}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 mb-5">
-                    {p.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-[11px] px-2.5 py-1 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-full border border-[#8B5CF6]/20"
-                        style={BODY}
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  <button
-                    className="cursor-pointer inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:text-[#A78BFA] transition-colors duration-200"
-                    style={BODY}
-                  >
-                    View Case Study{" "}
-                    <ArrowRight
-                      size={14}
-                      className="group-hover:translate-x-1 transition-transform duration-200"
-                    />
-                  </button>
-                </div>
-              </motion.div>
-            </FadeUp>
-          ))}
+        <div className="flex justify-center mt-12">
+          <FadeUp delay={0.2}>
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 border border-white/10 hover:border-white/20 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:bg-white/5 group"
+              style={BODY}
+            >
+              See More Projects
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+            </a>
+          </FadeUp>
         </div>
       </div>
     </section>
