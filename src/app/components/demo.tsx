@@ -1,7 +1,0 @@
-import { Component } from "@/app/components/ui/image-auto-slider";
-
-const DemoOne = () => {
-  return <Component />;
-};
-
-export { DemoOne };
