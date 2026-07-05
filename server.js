@@ -16,7 +16,11 @@ async function createServer() {
     appType: 'spa',
   });
 
-  app.use(helmet());
+  app.use(
+    helmet({
+      contentSecurityPolicy: false,
+    })
+  );
 
   app.use(
     cors({
