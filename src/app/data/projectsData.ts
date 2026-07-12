@@ -57,33 +57,33 @@ export const projectsData: ProjectDetails[] = [
   },
   {
     id: 2,
-    title: "Apex Dashboard",
-    category: "SaaS Analytics",
-    image: "/pictures/gen_project2.png",
-    bannerImage: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200&auto=format&fit=crop",
+    title: "BIS Incubator Platform",
+    category: "Web Application",
+    image: "/pictures/gen_bis_main.png",
+    bannerImage: "/pictures/gen_bis_banner.png",
     aspectClass: "aspect-[16/10]",
-    client: "Apex Metrics Corp",
-    role: "Full-Stack Development & Architecture",
-    duration: "3 Months",
-    liveUrl: "https://apex-metrics.example.com",
-    githubUrl: "https://github.com/example/apex-dashboard",
-    overview: "Apex Dashboard is a highly customizable SaaS analytics suite providing real-time infrastructure and user-growth insights for modern software startups.",
-    challenge: "Startups need insights instantly but are often overwhelmed by complex visualization tools. We needed to create a system that was deeply functional but incredibly intuitive, customizable, and capable of rendering large datasets dynamically.",
-    solution: "We designed a widgets-based drag-and-drop system. Starting from a pre-configured template, startups can easily swap widgets, configure custom metrics, and export reports in PDF or CSV format.",
+    client: "Université de M'sila",
+    role: "Full-Stack Engineering & Design",
+    duration: "Ongoing",
+    liveUrl: "http://localhost:5173",
+    githubUrl: "https://github.com/Abdobaki/bis-incubator",
+    overview: "A premium, award-winning university incubator website built for the Bureau d'Innovation & Startup. It features a stunning dark glassmorphic design, scroll animations, and full multilingual support for English, French, and Arabic.",
+    challenge: "The university incubator needed a modern, Apple-level polished website to attract startups and partners, requiring both a sleek public face and a functional administrative dashboard.",
+    solution: "I developed a highly responsive, animated platform using React, Vite, and Tailwind CSS. The interface utilizes custom Intersection Observer hooks for scroll reveals, floating particles, and interactive gallery lightboxes.",
     results: [
-      "2.5x faster insights discovery reported by clients.",
-      "Seamless integration with AWS and GCP analytics pipelines.",
-      "15,000+ monthly active users within the first month of deployment."
+      "Premium, award-winning UI/UX aesthetic.",
+      "Seamless RTL & LTR multilingual integration.",
+      "Comprehensive startup & event management portal."
     ],
-    technologies: ["React", "Vite", "Tailwind CSS", "D3.js", "Express", "PostgreSQL"],
+    technologies: ["React", "Vite", "Tailwind CSS", "Framer Motion", "React Router"],
     features: [
-      { title: "Dynamic Widgets", description: "Customizable grid layouts that persist per-user using LocalStorage/DB profiles." },
-      { title: "Alert Thresholds", description: "Automated triggers that send Slack or SMS notifications when key metrics drop." },
-      { title: "Multi-tenant Access", description: "Secure, role-based workspace permissions for teams of any size." }
+      { title: "Dark Glassmorphism", description: "Deep navy backgrounds with electric blue and violet frosted-glass accents." },
+      { title: "Interactive Animations", description: "Smooth scroll reveals, animated counters, and subtle particle effects." },
+      { title: "Admin Dashboard", description: "Built-in CRUD interface for managing startups, events, and news posts." }
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=800&auto=format&fit=crop"
+      "/pictures/gen_bis_gallery1.png",
+      "/pictures/gen_bis_gallery2.png"
     ]
   },
   {
