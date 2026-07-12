@@ -88,33 +88,33 @@ export const projectsData: ProjectDetails[] = [
   },
   {
     id: 3,
-    title: "Nova Landing Suite",
-    category: "Product Launch",
-    image: "/pictures/gen_project3.png",
-    bannerImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+    title: "Al Yasmin Pastry",
+    category: "E-Commerce & Brand",
+    image: "/pictures/gen_alyasmine_main.jpg",
+    bannerImage: "/pictures/gen_alyasmine_banner.jpg",
     aspectClass: "aspect-[16/10]",
-    client: "Nova Ventures",
-    role: "Front-End Development & Interaction Design",
+    client: "Al Yasmin Pastry Shop",
+    role: "Front-End Engineer & UX Design",
     duration: "2 Months",
-    liveUrl: "https://nova-launch.example.com",
-    githubUrl: "https://github.com/example/nova-landing",
-    overview: "Nova Landing Suite is a high-conversion digital marketing engine built for rapidly presenting and launching hardware products, utilizing state-of-the-art interactive web features.",
-    challenge: "Launching new hardware requires capturing and holding user attention. We needed to convey physical device craftsmanship online and ensure pages perform perfectly on mobile connections.",
-    solution: "We implemented premium visual elements, including optimized 3D WebGL models, scroll-triggered animations using Framer Motion, and lightweight vector assets.",
+    liveUrl: "http://localhost:5174",
+    githubUrl: "https://github.com/Abdobaki/alyasmine",
+    overview: "A premium frontend web application for Al Yasmin Pastry. It features a complete design system, rich interactive components, and a stunning visual presentation of the bakery's products.",
+    challenge: "The client needed a digital storefront that reflected the premium quality of their physical pastries, requiring a highly polished design system, smooth animations, and a rich component library.",
+    solution: "I built a comprehensive frontend architecture using React, Vite, and Tailwind CSS. The UI incorporates advanced Radix UI primitives for accessibility, Material UI icons, Framer Motion for delightful interactions, and responsive carousels for showcasing pastries.",
     results: [
-      "350% increase in product pre-orders compared to previous launches.",
-      "95+ Google Lighthouse performance score on mobile.",
-      "Featured on multiple design inspiration galleries."
+      "Established a scalable, reusable design system.",
+      "Highly responsive and accessible product catalogs.",
+      "Smooth shopping cart and navigation flow."
     ],
-    technologies: ["React", "Framer Motion", "Three.js", "Tailwind CSS", "Vite"],
+    technologies: ["React", "Vite", "Tailwind CSS", "Radix UI", "Framer Motion", "Recharts"],
     features: [
-      { title: "Interactive 3D Exploded View", description: "Engage users by letting them rotate and dissect the product structure in real-time." },
-      { title: "Localized Content Modules", description: "Dynamically served layouts tailored to region-specific marketing plans." },
-      { title: "One-Click Checkout", description: "Ultra-fast Stripe integration supporting Google Pay and Apple Pay." }
+      { title: "Robust Design System", description: "Built with Radix UI and Tailwind for accessible, customizable, and perfectly styled interactive components." },
+      { title: "Immersive Carousels", description: "Integrated Embla Carousel and React Slick for fluid browsing of the pastry catalog." },
+      { title: "Interactive UI Elements", description: "Framer motion animations, interactive modals, toasts, and dynamic masonry layouts." }
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+      "/pictures/gen_alyasmine_gallery1.jpg",
+      "/pictures/gen_alyasmine_gallery2.jpg"
     ]
   },
   {

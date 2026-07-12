@@ -27,7 +27,7 @@ const getProjectMetric = (id: number): string => {
   switch (id) {
     case 1: return "AI-Powered EMR";
     case 2: return "Award-Winning UI";
-    case 3: return "+350% Pre-Orders";
+    case 3: return "Premium Design System";
     case 4: return "-70% Render Load";
     case 5: return "50ms Keyboard Flow";
     case 6: return "+45% Recovery Speed";
