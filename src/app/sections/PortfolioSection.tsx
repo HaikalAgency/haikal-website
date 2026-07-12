@@ -25,7 +25,7 @@ const CATEGORY_TABS = [
 
 const getProjectMetric = (id: number): string => {
   switch (id) {
-    case 1: return "+40% Productivity";
+    case 1: return "AI-Powered EMR";
     case 2: return "2.5x Faster Insights";
     case 3: return "+350% Pre-Orders";
     case 4: return "-70% Render Load";

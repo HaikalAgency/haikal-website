@@ -27,33 +27,32 @@ export interface ProjectDetails {
 export const projectsData: ProjectDetails[] = [
   {
     id: 1,
-    title: "Vesper CRM Portal",
+    title: "Clinic Management EMR",
     category: "Web Application",
-    image: "/pictures/gen_project1.png",
-    bannerImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+    image: "/pictures/gen_clinic_main.png",
+    bannerImage: "/pictures/gen_clinic_banner.png",
     aspectClass: "aspect-[3/4]",
-    client: "Vesper Labs Inc.",
-    role: "Lead Front-End Engineering & UX Design",
-    duration: "4 Months",
-    liveUrl: "https://vesper-crm.example.com",
-    githubUrl: "https://github.com/example/vesper-crm",
-    overview: "Vesper CRM is a next-generation customer relationship management portal designed for mid-to-large scale enterprises. It streamlines communications, customer tracking, and automated pipeline workflows into a unified, lightning-fast dashboard.",
-    challenge: "Enterprises struggle with fragmented tools and slow load times. Our challenge was to design a dashboard that aggregates data from 5+ external APIs while maintaining a sub-100ms response time and providing a smooth visual experience for day-to-day sales agents.",
-    solution: "We engineered a dashboard using React, Tailwind CSS, and a specialized state management architecture. By leveraging query-level caching and optimistic UI updates, the interface feels completely instantaneous, even during high-throughput tasks.",
+    client: "Healthcare Providers",
+    role: "Full-Stack Engineer & AI Integration",
+    duration: "Ongoing",
+    githubUrl: "https://github.com/Abdobaki/clinic",
+    overview: "A comprehensive Electronic Medical Record (EMR) and clinic management system. It features role-based access for doctors and receptionists, patient profiling, appointment scheduling, billing, AI-powered medical assistance via Gemini, and multi-language support.",
+    challenge: "Modern clinics need a unified workspace to manage appointments, patient histories, prescriptions, and billing efficiently without navigating through complex, outdated software interfaces.",
+    solution: "I engineered a dynamic React and Vite based dashboard with role-based routing (Doctor/Receptionist). The system integrates the Google Gemini AI API to provide intelligent assistance and handles complex state management for patient records and billing.",
     results: [
-      "40% increase in daily agent productivity.",
-      "62% faster onboarding times for new client support agents.",
-      "Consistent 98% satisfaction rating on client interactions."
+      "Streamlined patient intake & billing workflows.",
+      "AI-assisted diagnoses and medication management.",
+      "Efficient role-based dashboards for different clinic staff."
     ],
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Recharts", "Node.js"],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Gemini API", "Vite"],
     features: [
-      { title: "Real-time Pipelines", description: "Visual drag-and-drop cards showing sales stage progression, powered by React DnD." },
-      { title: "Smart Reporting", description: "Interactive custom graphs with SVG animations detailing quarterly performance." },
-      { title: "Unified Inboxes", description: "Aggregated email, phone, and live chat logs updated in real-time." }
+      { title: "Role-Based Access", description: "Dedicated workspaces and tools for Doctors and Receptionists, ensuring secure data handling." },
+      { title: "AI Medical Assistant", description: "Integrated with Google's Gemini AI to assist with clinical workflows and medical data analysis." },
+      { title: "Comprehensive EMR", description: "Full tracking of patient profiles, consultation history, prescriptions, and invoicing." }
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?q=80&w=800&auto=format&fit=crop"
+      "/pictures/gen_clinic_gallery1.png",
+      "/pictures/gen_clinic_gallery2.png"
     ]
   },
   {
