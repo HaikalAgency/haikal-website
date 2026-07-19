@@ -22,21 +22,17 @@ const CATEGORY_TABS = [
   { id: "design", label: "Design & Brand", icon: Palette },
   { id: "mobile", label: "Mobile", icon: Smartphone }
 ];
-
+//here moh
 const getProjectMetric = (id: number): string => {
   switch (id) {
-    case 1: return "AI-Powered EMR";
-    case 2: return "Award-Winning UI";
-    case 3: return "Premium Design System";
-    case 4: return "-70% Render Load";
-    case 5: return "50ms Keyboard Flow";
-    case 6: return "+45% Recovery Speed";
-    case 7: return "3x Awwwards Honors";
-    case 8: return "4.7★ App Store";
-    case 9: return "+18% Energy Savings";
-    case 10: return "100% WCAG AAA";
-    case 11: return "12h+ Saved / Job";
-    case 12: return "+22% Avg ROI";
+    case 1: return "10,000+ Patients Managed";
+    case 2: return "1st Place UI/UX Award";
+    case 3: return "+45% Sales Conversion";
+    case 4: return "-30% Checkout Time";
+    case 5: return "-60% Check-in Time";
+    case 6: return "500+ Active Users/Mo";
+    case 7: return "+85% Inquiry Volume";
+    case 8: return "+35% Avg Order Value";
     default: return "";
   }
 };
