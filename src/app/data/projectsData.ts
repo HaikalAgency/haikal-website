@@ -177,31 +177,31 @@ export const projectsData: ProjectDetails[] = [
   },
   {
     id: 6,
-    title: "Horizon OS Core",
-    category: "Developer Platform",
-    image: "/pictures/gen_project6.png",
-    bannerImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
+    title: "SkillBridge",
+    category: "Professional Network",
+    image: "/pictures/gen_skillbridge_main.png",
+    bannerImage: "/pictures/gen_skillbridge_banner.png",
     aspectClass: "aspect-[16/10]",
-    client: "Horizon Systems",
-    role: "DevOps & Core Interface Architect",
-    duration: "6 Months",
-    overview: "A comprehensive developer portal providing visual cluster diagnostics, log aggregation, and single-command environment provisioning.",
-    challenge: "Kubernetes and cluster configurations are famously complex to audit visually. Horizon needed a dashboard mapping service mesh connections dynamically.",
-    solution: "We integrated dynamic node-link graph layouts using SVG viewport transitions and virtualized list containers to output 5,000 console lines per second.",
+    client: "Education & Career Services",
+    role: "Front-End Developer & UI Designer",
+    duration: "4 Months",
+    overview: "A professional networking and upskilling platform connecting users with verified job announcements, expert-led courses, and professional opportunities.",
+    challenge: "Job seekers often have to use multiple platforms to find jobs, track their skills, and take courses. They needed a unified app bridging the gap between skills and opportunity.",
+    solution: "We engineered a clean, mobile-first responsive web application utilizing React and Tailwind CSS, focused on seamless navigation and high user engagement.",
     results: [
-      "Increased server incident recovery speeds by 45%.",
-      "Reduced CPU rendering overhead in browsers by 80% compared to legacy monitoring portals.",
-      "Highly scalable interface framework adopted as standard internal software."
+      "Attracted over 500+ active professionals in the first month.",
+      "Successfully listed 50+ curated job announcements.",
+      "High user retention rate driven by the integrated course discovery."
     ],
-    technologies: ["React", "Tailwind CSS", "SVG Nodes", "WebSockets", "Go", "Docker"],
+    technologies: ["React", "Vite", "Tailwind CSS", "Lucide React", "Node.js"],
     features: [
-      { title: "Interactive Mesh Mapping", description: "Real-time connection nodes highlighting microservice health metrics instantly." },
-      { title: "Live Streaming Terminals", description: "Fully integrated xterm.js portal connecting to cloud instances." },
-      { title: "Environment Blueprints", description: "Click-to-configure deployment visualizers exporting valid YAML code." }
+      { title: "Job Board Integration", description: "Real-time, verified job announcements tailored to the user's skill set." },
+      { title: "Course Discovery", description: "Curated catalog of expert-led courses to help users upskill." },
+      { title: "Professional Profiles", description: "Dynamic user profiles showcasing skills, completed courses, and career progress." }
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
+      "/pictures/gen_skillbridge_gallery1.png",
+      "/pictures/gen_skillbridge_gallery2.png"
     ]
   },
   {
