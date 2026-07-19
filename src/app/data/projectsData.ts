@@ -206,31 +206,31 @@ export const projectsData: ProjectDetails[] = [
   },
   {
     id: 7,
-    title: "Zenith Agency Website",
-    category: "Creative Marketing",
-    image: "/pictures/gen_project7.png",
-    bannerImage: "https://images.unsplash.com/photo-1542744094-3a31f103e35f?q=80&w=1200&auto=format&fit=crop",
+    title: "Apex Showroom",
+    category: "Automotive E-Commerce",
+    image: "https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=800&auto=format&fit=crop",
+    bannerImage: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=1200&auto=format&fit=crop",
     aspectClass: "aspect-[3/4]",
-    client: "Zenith Marketing Group",
-    role: "Creative Web Director & Interactions",
-    duration: "2 Months",
-    overview: "A highly artistic, award-winning agency website designed with immersive WebGL assets, scroll-linked parallax, and rich page transitions.",
-    challenge: "As a premier agency, Zenith needed their website to demonstrate creative dominance while staying performant and navigable for traditional corporate clients.",
-    solution: "We established a design incorporating glassmorphic layers, custom cursors, smooth-scroll overrides, and optimized image assets.",
+    client: "Apex Luxury Autos",
+    role: "Full-Stack Web Architect",
+    duration: "3 Months",
+    overview: "A premium digital showroom for exotic and luxury vehicles, featuring high-resolution photography, detailed vehicle specifications, and a sophisticated browsing experience.",
+    challenge: "Luxury car dealerships need a digital presence that matches the prestige of their inventory. The client wanted an interface that felt as premium as sitting in a Ferrari F8 Tributo.",
+    solution: "We built a sleek, dark-themed React application using Tailwind CSS. We implemented smooth animations, responsive grids for car listings, and a dynamic data structure to handle complex vehicle stats.",
     results: [
-      "Won three Awwwards honors (Site of the Day, Developer Award, Mobile Excellence).",
-      "Increased contact form requests by 120%.",
-      "99% positive design feedback score from stakeholders."
+      "Increased online inquiry volume for high-end vehicles by 85%.",
+      "Achieved a 40% longer average session duration.",
+      "Delivered a seamless browsing experience on both mobile and 4K displays."
     ],
-    technologies: ["React", "GSAP", "Tailwind CSS", "Vite", "Three.js"],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
     features: [
-      { title: "Smooth Scroll", description: "Custom physics-based smooth scrolling to enhance visual parallax effects." },
-      { title: "Immersive Showreel", description: "Custom HTML5 video wrapper featuring magnetic overlay interaction tags." },
-      { title: "Interactive Contact Page", description: "Fluid SVG canvas grid that reacts to cursor hover actions." }
+      { title: "Dynamic Inventory", description: "Real-time filtering of exotic cars by make, model, performance metrics, and price." },
+      { title: "Detailed Specifications", description: "Deep-dive view into engine specs, acceleration, and bespoke features." },
+      { title: "Premium Visuals", description: "Optimized delivery of high-resolution, uncompressed vehicle photography." }
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1503376712344-652d0b04c8f2?q=80&w=800&auto=format&fit=crop"
     ]
   },
   {
