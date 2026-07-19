@@ -235,31 +235,31 @@ export const projectsData: ProjectDetails[] = [
   },
   {
     id: 8,
-    title: "Pulse Mobile Client",
-    category: "iOS & Android",
-    image: "/pictures/gen_project8.png",
-    bannerImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+    title: "Happy Space Coffee",
+    category: "Web Application",
+    image: "/pictures/gen_coffe_shop_main.png",
+    bannerImage: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1200&auto=format&fit=crop",
     aspectClass: "aspect-[4/3]",
-    client: "Pulse Fintech Ltd",
-    role: "Lead Mobile Frontend Architect",
-    duration: "4 Months",
-    overview: "A cutting-edge client application enabling high-speed money transfers and personalized savings vault analysis.",
-    challenge: "Financial mobile apps often feel cluttered and load slowly. We aimed to deliver a modern visual experience with immediate feedback and highly polished micro-interactions.",
-    solution: "We created a React Native frontend structure backed by customized native widgets, optimizing image delivery and data caching mechanisms.",
+    client: "Happy Space Café",
+    role: "Lead Frontend Engineer",
+    duration: "2 Months",
+    overview: "A premium, bilingual (French & Arabic) digital ordering system and interactive menu designed for artisanal coffee shops and bakeries, integrated with Google's Gemini AI.",
+    challenge: "The café needed a modern, interactive digital menu that elegantly showcased their premium coffee selection (like Ristretto and Chocolat Chaud) while providing smart, AI-driven recommendations to customers.",
+    solution: "We built a lightning-fast React application using Vite and TypeScript. It features a bilingual data structure and integrates the Gemini API to offer personalized order suggestions.",
     results: [
-      "App Store rating increased from 3.8 to 4.7 stars.",
-      "Transaction load times reduced to under 1.2 seconds global average.",
-      "Over $50M in transactions processed in the first quarter."
+      "Enhanced customer experience with an intuitive bilingual interface.",
+      "Increased average order value via AI-driven recommendations.",
+      "Streamlined the ordering process for high-traffic hours."
     ],
-    technologies: ["React Native", "Expo", "TypeScript", "Tailwind CSS", "Reanimated"],
+    technologies: ["React", "TypeScript", "Vite", "Gemini API", "Tailwind CSS"],
     features: [
-      { title: "Biometric Checkout", description: "Secure, native FaceID/TouchID checks integrated with transaction approvals." },
-      { title: "Smart Vaults", description: "Animated round-up savings vaults visualizing progress towards financial goals." },
-      { title: "Offline Ledgers", description: "SQLite-backed transaction cache allowing local entries and sync features." }
+      { title: "Bilingual Menu System", description: "Seamless switching between French and Arabic descriptions with full RTL layout support." },
+      { title: "Smart Recommendations", description: "Integrated with Gemini AI to suggest pastry pairings for specific coffee drinks." },
+      { title: "Interactive Ordering", description: "A beautifully animated cart and checkout flow ensuring a premium user experience." }
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?q=80&w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=800&auto=format&fit=crop"
     ]
   },
   {
