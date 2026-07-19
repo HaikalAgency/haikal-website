@@ -119,62 +119,60 @@ export const projectsData: ProjectDetails[] = [
   },
   {
     id: 4,
-    title: "Aether Analytics",
-    category: "Visual BI Tool",
-    image: "/pictures/gen_project4.png",
-    bannerImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
+    title: "Clothing Store POS",
+    category: "Desktop Application",
+    image: "/pictures/gen_pos_main.png",
+    bannerImage: "/pictures/gen_pos_banner.png",
     aspectClass: "aspect-[16/10]",
-    client: "Aether Capital LLC",
-    role: "Lead UI Developer & UX Strategist",
-    duration: "5 Months",
-    liveUrl: "https://aether-bi.example.com",
-    githubUrl: "https://github.com/example/aether-analytics",
-    overview: "Aether Analytics is a luxury-branded financial intelligence and visual business intelligence portal mapping global market distributions and capital movements.",
-    challenge: "Financial analysts process massive streams of global asset values. The dashboard had to group complex numerical metrics without visual clutter or rendering lag.",
-    solution: "We designed a dark-themed portal utilizing WebGL-accelerated canvas renderers for charts and clean typography (Space Grotesk) to structure critical points.",
+    client: "Retail Clients",
+    role: "Full-Stack Developer & UI Designer",
+    duration: "2 Months",
+    overview: "A sleek, modern Point of Sale (POS) application designed specifically for clothing and retail stores. It streamlines checkout, inventory management, and customer tracking.",
+    challenge: "Clothing retailers need a fast, intuitive system that staff can learn instantly, while still handling complex variations like sizes, colors, and seasonal inventory.",
+    solution: "We designed a desktop application with a clean, touch-friendly interface, optimizing the checkout flow for speed and integrating a comprehensive product catalog.",
     results: [
-      "Decreased dashboard render overhead by 70%.",
-      "Enabled smooth visualization of over 100,000 active tickers.",
-      "Lauded by executive management for class-leading modern styling."
+      "Reduced average checkout time by 30%.",
+      "Streamlined inventory tracking with real-time updates.",
+      "Highly praised by retail staff for its intuitive design."
     ],
-    technologies: ["React", "WebGL Canvas", "TypeScript", "Tailwind CSS", "Recharts", "Framer Motion"],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Electron", "Node.js"],
     features: [
-      { title: "Global Heatmaps", description: "Highly interactive vector maps charting international trade flow metrics." },
-      { title: "Live Order Books", description: "Virtual list rendering updating at 60fps for crypto and equity movements." },
-      { title: "Automated Insights", description: "AI-summarized financial health briefs delivered straight to your workspace." }
+      { title: "Fast Checkout", description: "Optimized barcode scanning and manual entry for rapid transaction processing." },
+      { title: "Inventory Management", description: "Real-time tracking of product variants including sizes and colors." },
+      { title: "Sales Analytics", description: "Comprehensive dashboards for tracking daily sales, popular items, and staff performance." }
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
+      "/pictures/gen_pos_gallery1.png",
+      "/pictures/gen_pos_gallery2.png"
     ]
   },
   {
     id: 5,
-    title: "Linear Workflows",
-    category: "Product Management",
-    image: "/pictures/gen_project5.png",
-    bannerImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
+    title: "GymApp POS",
+    category: "Desktop Application",
+    image: "/pictures/gen_gymapp_main.png",
+    bannerImage: "/pictures/gen_gymapp_banner.png",
     aspectClass: "aspect-[4/3]",
-    client: "Linear Technologies",
-    role: "Frontend Design Engineer",
+    client: "Fitness Centers",
+    role: "Full-Stack Desktop Developer",
     duration: "3 Months",
-    overview: "A sleek workspace management tool implementing clean, ultra-responsive keyboard shortcuts and fast task tracking.",
-    challenge: "Standard project management platforms feel heavy and require too many clicks. We wanted to build a keyboard-first flow that executes actions under 50ms.",
-    solution: "We developed an custom hotkey engine and implemented optimistic state updates with react-query, providing feedback immediately before network confirmation.",
+    overview: "A comprehensive Point of Sale (POS) and membership management system built with Electron. It empowers gyms to manage subscriptions, sales, and daily operations in a unified workspace.",
+    challenge: "Gym managers often juggle multiple software tools for member check-ins, subscription tracking, and POS. They needed a single, offline-capable desktop application with hardware integrations (QR scanners).",
+    solution: "We developed a high-performance Electron application using React and a local SQLite database, featuring machine ID-based security and an integrated point of sale module.",
     results: [
-      "30% reduction in average task update times.",
-      "High adoption rate among developer circles.",
-      "Minimalistic UX praised for zero-distraction workflow design."
+      "Consolidated 3 separate management tools into 1 interface.",
+      "Enabled offline operations with instantaneous local database queries.",
+      "Reduced member check-in times by 60% with instant QR scanning."
     ],
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Zustand", "React Query"],
+    technologies: ["Electron", "React", "TypeScript", "Tailwind CSS", "SQLite"],
     features: [
-      { title: "Command Menu", description: "Press Cmd+K to search, update, assign, or complete tasks in seconds." },
-      { title: "Sub-task Nesting", description: "Infinite sub-task levels with clean inline creation interfaces." },
-      { title: "Offline Syncing", description: "Changes are saved locally and synced automatically when connections restore." }
+      { title: "Membership Check-ins", description: "Real-time QR code scanning to grant access and validate active subscriptions." },
+      { title: "Subscription Tracking", description: "Flexible plans (Time-Based & Session-Based) with automatic status updates." },
+      { title: "Integrated POS", description: "Fast checkout process for selling products like supplements and water with batch sales support." }
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?q=80&w=800&auto=format&fit=crop"
+      "/pictures/gen_gymapp_gallery1.png",
+      "/pictures/gen_gymapp_gallery2.png"
     ]
   },
   {
