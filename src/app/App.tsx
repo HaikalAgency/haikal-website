@@ -8,7 +8,6 @@ import { Results } from "./sections/ResultsSection";
 import { Process } from "./sections/ProcessSection";
 import { Portfolio } from "./sections/PortfolioSection";
 import { Technologies } from "./sections/TechnologiesSection";
-import { Testimonials } from "./sections/TestimonialsSection";
 import { FAQ } from "./sections/FAQSection";
 import { Contact } from "./sections/ContactSection";
 import { Footer } from "./sections/FooterSection";
@@ -42,7 +41,6 @@ export default function App() {
               <Process />
               <Portfolio />
               <Technologies />
-              <Testimonials />
               <FAQ />
               <Contact />
             </>
