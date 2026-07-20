@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../../sections/helpers';
 
 export const Component = () => {
   // Images for the infinite scroll - using Unsplash URLs
@@ -74,7 +75,7 @@ export const Component = () => {
                   className="image-item flex-shrink-0 w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-xl overflow-hidden shadow-2xl bg-zinc-900/50 flex items-center justify-center border border-zinc-800"
                 >
                   <img
-                    src={image}
+                    src={getAssetUrl(image)}
                     alt={`Gallery image ${(index % images.length) + 1}`}
                     className="w-full h-full object-contain"
                     loading="lazy"

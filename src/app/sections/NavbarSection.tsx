@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router";
-import { HEADING, BODY } from "./helpers";
+import { HEADING, BODY, getAssetUrl } from "./helpers";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -44,7 +44,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
         <Link to="/" className="flex items-center gap-2 group" style={HEADING}>
-          <img src="/FreeSample-Vectorizer-io-photo_5933623587627535943_y.svg" alt="Haikal Logo" className="w-8 h-8 object-contain" />
+          <img src={getAssetUrl("/FreeSample-Vectorizer-io-photo_5933623587627535943_y.svg")} alt="Haikal Logo" className="w-8 h-8 object-contain" />
           <span className="text-white font-semibold text-lg tracking-tight">
             Haikal
           </span>

@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router";
 import { ArrowLeft, ExternalLink, Github, CheckCircle2, ArrowRight } from "lucide-react";
 import { projectsData } from "../data/projectsData";
-import { FadeUp, SectionLabel, HEADING, BODY } from "./helpers";
+import { FadeUp, SectionLabel, HEADING, BODY, getAssetUrl } from "./helpers";
 
 export function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
@@ -32,7 +32,7 @@ export function ProjectDetail() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src={project.bannerImage}
+            src={getAssetUrl(project.bannerImage)}
             alt={project.title}
             className="w-full h-full object-cover opacity-80"
           />
@@ -232,7 +232,7 @@ export function ProjectDetail() {
                 <FadeUp key={index} delay={index * 0.05}>
                   <div className="group overflow-hidden rounded-2xl border border-white/5 bg-[#121212] aspect-[16/10] shadow-lg">
                     <img
-                      src={imgUrl}
+                      src={getAssetUrl(imgUrl)}
                       alt={`${project.title} screenshot ${index + 1}`}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
                     />

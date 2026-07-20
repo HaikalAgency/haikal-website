@@ -12,7 +12,7 @@ import {
   Palette, 
   Smartphone 
 } from "lucide-react";
-import { FadeUp, SectionLabel, HEADING, BODY } from "./helpers";
+import { FadeUp, SectionLabel, HEADING, BODY, getAssetUrl } from "./helpers";
 import { projectsData } from "../data/projectsData";
 
 const CATEGORY_TABS = [
@@ -183,7 +183,7 @@ export function Portfolio() {
                   >
                     <div className="w-full h-[220px] relative overflow-hidden">
                       <img
-                        src={project.image}
+                        src={getAssetUrl(project.image)}
                         alt={project.title}
                         className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                         loading="lazy"

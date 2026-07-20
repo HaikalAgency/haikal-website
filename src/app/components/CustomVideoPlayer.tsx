@@ -9,7 +9,7 @@ import {
   RotateCcw,
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import { BODY } from "../sections/helpers";
+import { BODY, getAssetUrl } from "../sections/helpers";
 
 interface CustomVideoPlayerProps {
   src: string;
@@ -181,8 +181,8 @@ export function CustomVideoPlayer({
       {/* Background Video Element */}
       <video
         ref={videoRef}
-        src={src}
-        poster={poster}
+        src={getAssetUrl(src)}
+        poster={poster ? getAssetUrl(poster) : undefined}
         autoPlay={autoPlay}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}

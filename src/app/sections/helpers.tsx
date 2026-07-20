@@ -41,3 +41,10 @@ export function SectionLabel({ children }: { children: React.ReactNode }) {
     </span>
   );
 }
+
+export function getAssetUrl(url: string) {
+  if (!url) return "";
+  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  const cleanUrl = url.startsWith("/") ? url.slice(1) : url;
+  return `${import.meta.env.BASE_URL}${cleanUrl}`;
+}
