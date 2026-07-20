@@ -2,11 +2,9 @@ import nodemailer from "nodemailer";
 import { simpleRateLimit, sanitize, isValidEmail } from "./utils.js";
 
 export default async function handler(req, res) {
+  const origin = req.headers.origin || "";
   res.setHeader("Access-Control-Allow-Credentials", true);
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    process.env.CORS_ORIGIN || "http://localhost:3001",
-  );
+  res.setHeader("Access-Control-Allow-Origin", origin || "*");
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET,OPTIONS,PATCH,DELETE,POST,PUT",
