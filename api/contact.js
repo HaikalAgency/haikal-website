@@ -54,7 +54,9 @@ export default async function handler(req, res) {
 
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
       console.error("EMAIL_USER or EMAIL_PASS not configured");
-      return res.status(500).json({ error: "Server configuration error." });
+      return res.status(500).json({ 
+        error: `Server configuration error. EMAIL_USER: ${process.env.EMAIL_USER ? "configured" : "MISSING"}, EMAIL_PASS: ${process.env.EMAIL_PASS ? "configured" : "MISSING"}` 
+      });
     }
 
     const transporter = nodemailer.createTransport({
@@ -86,6 +88,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ message: "Email sent successfully!" });
   } catch (error) {
     console.error("Error sending email:", error);
-    return res.status(500).json({ error: "Failed to send email." });
+    return res.status(500).json({ error: `Failed to send email: ${error.message || error}` });
   }
 }

@@ -247,19 +247,19 @@ export function ArchitecturalBlueprint() {
               {/* Glowing Corner Vertices Markers */}
               <g fill="#A78BFA" filter="url(#glow-filter)">
                 {/* L2 Vertices */}
-                <circle cx={cx - rx} cy="130" r="3.5" />
-                <circle cx={cx + rx} cy="130" r="3.5" />
-                <circle cx={cx} cy="130 - ry" r="3" fill="#8B5CF6" />
-                <circle cx={cx} cy="130 + ry" r="3" fill="#8B5CF6" />
+                <circle cx={cx - rx} cy={130} r="3.5" />
+                <circle cx={cx + rx} cy={130} r="3.5" />
+                <circle cx={cx} cy={130 - ry} r="3" fill="#8B5CF6" />
+                <circle cx={cx} cy={130 + ry} r="3" fill="#8B5CF6" />
 
                 {/* L1 Vertices */}
-                <circle cx={cx - rx} cy="230" r="2" fill="#8B5CF6" />
-                <circle cx={cx + rx} cy="230" r="2" fill="#8B5CF6" />
+                <circle cx={cx - rx} cy={230} r="2" fill="#8B5CF6" />
+                <circle cx={cx + rx} cy={230} r="2" fill="#8B5CF6" />
 
                 {/* L0 Vertices */}
-                <circle cx={cx - rx} cy="330" r="3" fill="#8B5CF6" />
-                <circle cx={cx + rx} cy="330" r="3" fill="#8B5CF6" />
-                <circle cx={cx} cy="330 + ry" r="3.5" />
+                <circle cx={cx - rx} cy={330} r="3" fill="#8B5CF6" />
+                <circle cx={cx + rx} cy={330} r="3" fill="#8B5CF6" />
+                <circle cx={cx} cy={330 + ry} r="3.5" />
               </g>
             </svg>
           </motion.div>
