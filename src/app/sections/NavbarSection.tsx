@@ -25,11 +25,12 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const links = ["Home", "Services", "Portfolio", "Process", "Contact"];
+  const links = ["Home", "Services", "Portfolio", "Featured Edits", "Process", "Contact"];
 
   const getHref = (l: string) => {
     if (l === "Home") return isHomePage ? "#" : "/";
-    return isHomePage ? `#${l.toLowerCase()}` : `/#${l.toLowerCase()}`;
+    const slug = l.toLowerCase().replace(/\s+/g, "-");
+    return isHomePage ? `#${slug}` : `/#${slug}`;
   };
 
   return (

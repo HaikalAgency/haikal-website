@@ -7,6 +7,7 @@ import { Services } from "./sections/ServicesSection";
 import { Results } from "./sections/ResultsSection";
 import { Process } from "./sections/ProcessSection";
 import { Portfolio } from "./sections/PortfolioSection";
+import { FeaturedEditsSection } from "./sections/FeaturedEditsSection";
 import { Technologies } from "./sections/TechnologiesSection";
 import { FAQ } from "./sections/FAQSection";
 import { Contact } from "./sections/ContactSection";
@@ -40,6 +41,7 @@ export default function App() {
               <Results />
               <Process />
               <Portfolio />
+              <FeaturedEditsSection />
               <Technologies />
               <FAQ />
               <Contact />
