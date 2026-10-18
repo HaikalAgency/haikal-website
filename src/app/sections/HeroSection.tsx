@@ -1,94 +1,140 @@
-import { motion } from "motion/react";
-import { ArrowRight } from "lucide-react";
-import { ArchitecturalBlueprint } from "../components/ui/ArchitecturalBlueprint";
-import { HEADING, BODY, SectionLabel } from "./helpers";
-
+import { useRef } from "react";
+import { ArrowDown, ArrowUpRight, Asterisk } from "lucide-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { RibbonSculpture } from "../components/RibbonSculpture";
 export function Hero() {
-  return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center overflow-hidden pt-20"
-    >
-      <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
-      <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-[#8B5CF6]/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-[#A78BFA]/10 rounded-full blur-[80px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full py-24 lg:py-0 grid lg:grid-cols-2 gap-16 items-center">
-        <div>
-            
-
-          <motion.h1
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-5xl lg:text-7xl font-bold text-white leading-[1.06] tracking-tight mb-6"
-            style={HEADING}
-          >
-            Building
-            <br />
-            <span
-              className="text-transparent bg-clip-text"
-              style={{
-                backgroundImage:
-                  "linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%)",
-              }}
-            >
-              Digital
+  const root = useRef<HTMLElement>(null);
+  useGSAP(() => {
+    const media = gsap.matchMedia();
+    media.add("(prefers-reduced-motion: no-preference)", () => {
+      gsap.timeline({
+        defaults: {
+          ease: "power3.out"
+        }
+      }).from(".hero-eyebrow", {
+        opacity: 0,
+        y: 15,
+        duration: 0.7
+      }, 0.05).from(".hero-line > span", {
+        yPercent: 110,
+        rotate: 3,
+        stagger: 0.12,
+        duration: 1.15
+      }, 0.12).from(".hero-copy, .hero-actions, .hero-bottom", {
+        opacity: 0,
+        y: 22,
+        duration: 0.8,
+        stagger: 0.12
+      }, 0.65).from(".hero-art", {
+        opacity: 0,
+        scale: 0.85,
+        rotate: -14,
+        duration: 1.6
+      }, 0.15);
+      const float = gsap.to(".sculpture-float", {
+        y: -16,
+        rotation: 5,
+        duration: 5.5,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+      });
+      gsap.to(".hero-art-scroll", {
+        y: 100,
+        rotation: -10,
+        ease: "none",
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+          onToggle: self => self.isActive ? float.resume() : float.pause()
+        }
+      });
+    });
+    media.add("(hover: hover) and (prefers-reduced-motion: no-preference)", () => {
+      const xTo = gsap.quickTo(".sculpture-pointer", "x", {
+          duration: 1.2,
+          ease: "power3.out"
+        }),
+        yTo = gsap.quickTo(".sculpture-pointer", "y", {
+          duration: 1.2,
+          ease: "power3.out"
+        });
+      const node = root.current;
+      const move = (event: PointerEvent) => {
+        const box = node!.getBoundingClientRect();
+        xTo((event.clientX / box.width - 0.5) * 35);
+        yTo(((event.clientY - box.top) / box.height - 0.5) * 25);
+      };
+      const reset = () => {
+        xTo(0);
+        yTo(0);
+      };
+      node?.addEventListener("pointermove", move);
+      node?.addEventListener("pointerleave", reset);
+      return () => {
+        node?.removeEventListener("pointermove", move);
+        node?.removeEventListener("pointerleave", reset);
+      };
+    });
+    return () => media.revert();
+  }, {
+    scope: root
+  });
+  return <>
+    <section ref={root} id="home" className="hero site-container">
+      <div className="hero-eyebrow eyebrow"><span className="status-dot" />Independent digital design & development studio</div>
+      <div className="hero-main">
+        <div className="hero-type">
+          <h1>
+            <span className="hero-line">
+              <span>Good ideas.</span>
             </span>
-            <br />
-            Excellence
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="text-[#737373] text-lg leading-relaxed max-w-lg mb-10"
-            style={BODY}
-          >
-            We engineer high-performance websites, desktop software, mobile
-            applications and digital experiences that help businesses grow.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-wrap gap-4"
-          >
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 bg-[#8B5CF6] hover:bg-[#9D71FB] text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-[#8B5CF6]/30 hover:-translate-y-1"
-              style={BODY}
-            >
-              Start Your Project <ArrowRight size={16} />
-            </a>
-            <a
-              href="#portfolio"
-              className="inline-flex items-center gap-2 border border-white/10 hover:border-white/20 text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 hover:bg-white/5"
-              style={BODY}
-            >
-              View Portfolio
-            </a>
-          </motion.div>
+            <span className="hero-line">
+              <span>Extraordinary</span>
+            </span>
+            <span className="hero-line hero-line-violet">
+              <span>digital<span className="hero-fullstop">.</span></span>
+            </span>
+          </h1>
+          <p className="hero-copy">We turn ambitious ideas into websites, software<br className="desktop-break" /> and digital experiences with a point of difference.</p>
+          <div className="hero-actions">
+            <a className="button" href="#portfolio">Explore our work <ArrowUpRight size={18} /></a>
+            <a className="text-link" href="#contact">Have a project in mind? <ArrowUpRight size={15} /></a>
+          </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="relative hidden lg:flex items-center justify-center w-full h-[500px]"
-        >
-          <ArchitecturalBlueprint />
-        </motion.div>
+        <div className="hero-art" role="img" aria-label="Sculptural violet ribbon, a continuous form connecting creativity and engineering">
+          <div className="hero-art-scroll">
+            <div className="sculpture-pointer">
+              <div className="sculpture-float">
+                <RibbonSculpture />
+              </div>
+            </div>
+          </div>
+          <span className="art-caption eyebrow">An intersection of form & function</span>
+          <span className="art-index eyebrow">H® — 001</span>
+          <span className="art-cross art-cross-one">+</span>
+          <span className="art-cross art-cross-two">+</span>
+        </div>
+      </div>
+      <div className="hero-bottom">
+        <span className="eyebrow">Thoughtfully designed. Precisely built.</span>
+        <span className="hero-location">Based in Algeria. Working everywhere.</span>
+        <a href="#portfolio" className="scroll-link" aria-label="Scroll to selected work">
+          <ArrowDown size={17} />
+        </a>
       </div>
     </section>
-  );
+    <div className="client-strip site-container">
+      <span className="eyebrow">In good<br />company</span>
+      <div className="client-wordmarks">
+        <span className="client-bis"><Asterisk /> BIS<span className="client-sub">INCUBATOR</span></span>
+        <span className="client-yasmin">Al Yasmin<span className="client-sub">PATISSERIE</span></span>
+        <span className="client-skill">skillbridge<span className="client-dot">↗</span></span>
+        <span className="client-happy">happy space<span className="client-sub">COFFEE & COMMUNITY</span></span>
+      </div>
+    </div>
+  </>;
 }

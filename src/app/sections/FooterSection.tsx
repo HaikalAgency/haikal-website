@@ -1,84 +1,33 @@
-import { Instagram, Facebook, Linkedin } from "lucide-react";
-import { HEADING, BODY } from "./helpers";
-
+import { ArrowUpRight } from "lucide-react";
+import { BrandMark } from "./helpers";
 export function Footer() {
-  const links = {
-    "Quick Links": ["Home", "About", "Services", "Portfolio", "Contact"],
-    Services: [
-      "Web Development",
-      "Desktop Software",
-      "Mobile Apps",
-      "Video Editing",
-    ],
-  };
-
-  return (
-    <footer className="border-t border-white/6 py-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-4 gap-12 mb-12">
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4" style={HEADING}>
-              <div className="w-8 h-8 rounded-lg bg-[#8B5CF6] flex items-center justify-center">
-                <span className="text-white font-bold text-sm">H</span>
-              </div>
-              <span className="text-white font-semibold text-lg tracking-tight">
-                Haikal
-              </span>
-            </div>
-            <p
-              className="text-[#737373] text-sm leading-relaxed max-w-xs mb-6"
-              style={BODY}
-            >
-              A premium software engineering agency delivering enterprise-grade
-              digital products for ambitious businesses worldwide.
-            </p>
-            <div className="flex gap-3">
-              {[Instagram, Facebook, Linkedin].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-9 h-9 rounded-xl bg-[#111111] border border-white/8 hover:border-[#8B5CF6]/40 flex items-center justify-center text-[#737373] hover:text-white transition-all duration-200"
-                >
-                  <Icon size={16} />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {Object.entries(links).map(([group, items]) => (
-            <div key={group}>
-              <h4
-                className="text-white text-xs font-bold uppercase tracking-widest mb-5"
-                style={HEADING}
-              >
-                {group}
-              </h4>
-              <ul className="space-y-3">
-                {items.map((item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="text-[#737373] hover:text-white text-sm transition-colors duration-200"
-                      style={BODY}
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="border-t border-white/6 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[#737373] text-xs" style={BODY}>
-            &copy; {new Date().getFullYear()} Haikal Agency. All rights reserved.
-          </p>
-          <p className="text-[#737373] text-xs" style={BODY}>
-            Engineered with precision.
-          </p>
+  return <footer className="site-footer">
+    <div className="site-container">
+      <div className="footer-top">
+        <a className="brand" href="/" aria-label="Haikal Agency home">
+          <BrandMark />
+          <span>haikal.</span>
+        </a>
+        <p>Independent minds.<br />Exceptional digital.</p>
+        <nav aria-label="Footer navigation">
+          <h3 className="eyebrow">Quick Links</h3>
+          <a href="/#portfolio">Work <ArrowUpRight size={13} /></a>
+          <a href="/#services">Expertise <ArrowUpRight size={13} /></a>
+          <a href="/#about">Studio <ArrowUpRight size={13} /></a>
+          <a href="/#contact">Contact <ArrowUpRight size={13} /></a>
+        </nav>
+        <div className="footer-note">
+          <span className="eyebrow">Have a good one.</span>
+          <span>Algeria ↔ Everywhere</span>
+          <a href="mailto:hello@haikal.agency">Say hello <ArrowUpRight size={14} /></a>
         </div>
       </div>
-    </footer>
-  );
+      <div className="footer-wordmark" aria-hidden="true">haikal<span>®</span></div>
+      <div className="footer-bottom">
+        <span>© {new Date().getFullYear()} Haikal Agency</span>
+        <span>Made with intention.</span>
+        <a href="#main">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>;
 }
