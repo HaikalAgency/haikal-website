@@ -2,23 +2,23 @@
 
 :root {
   --font-size: 16px;
-  --background: #0A0A0A;
-  --foreground: #F5F5F5;
-  --card: #111111;
+  --background: #111014;
+  --foreground: #f1eeeb;
+  --card: #19171d;
   --card-foreground: #F5F5F5;
   --popover: #111111;
   --popover-foreground: #F5F5F5;
-  --primary: #8B5CF6;
+  --primary: #b79ae9;
   --primary-foreground: #F5F5F5;
   --secondary: #161616;
   --secondary-foreground: #F5F5F5;
   --muted: #161616;
-  --muted-foreground: #737373;
-  --accent: #A78BFA;
+  --muted-foreground: #a09ba7;
+  --accent: #c8b4e9;
   --accent-foreground: #0A0A0A;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
-  --border: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.12);
   --input: transparent;
   --input-background: #111111;
   --switch-background: #2A2A2A;
